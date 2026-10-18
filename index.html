@@ -1,0 +1,2512 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatchana Phoplap (Nepjune) | Marketing Intern & Brand Strategy Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#f6f4ee',
+                        paperDark: '#0b0f19',
+                        paperCard: '#ffffff',
+                        paperCardDark: '#131c2e',
+                        warmBeige: '#ebe6dc',
+                        bubblePink: '#ec4899',
+                        hotPink: '#db2777',
+                        softPink: '#fce7f3',
+                        blush: '#fff5f7',
+                        ink: '#141413',
+                        inkDark: '#f3f4f6',
+                        charcoal: '#374151',
+                        matcha: '#65a30d',
+                        butter: '#fde047',
+                        skyFolder: '#93c5fd',
+                        peachFolder: '#fdba74',
+                        mintFolder: '#bef264'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                        condensed: ['Anton', 'sans-serif'],
+                        serifItalic: ['Instrument Serif', 'serif'],
+                        hand: ['Caveat', 'cursive'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    boxShadow: {
+                        'scrapbook': '0 14px 36px -8px rgba(20, 20, 19, 0.08), 0 4px 12px -2px rgba(20, 20, 19, 0.04)',
+                        'sticker': '3px 3px 0px #141413',
+                        'pink-sticker': '3px 3px 0px #ec4899',
+                        'window': '0 20px 50px -12px rgba(20, 20, 19, 0.12), 0 0 0 1.5px #141413',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: var(--bg-color, #f6f4ee);
+            color: var(--text-color, #141413);
+            overflow-x: hidden;
+            transition: background-color 0.4s ease, color 0.4s ease;
+            background-image: 
+                linear-gradient(to right, rgba(20, 20, 19, 0.035) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(20, 20, 19, 0.035) 1px, transparent 1px);
+            background-size: 36px 36px;
+        }
+
+        .dark body {
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        @media (min-width: 768px) {
+            section {
+                padding-top: 1.75rem;
+                padding-bottom: 1.75rem;
+            }
+        }
+
+        body.tour-completed .editorial-card {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        body.tour-completed .editorial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 22px 48px -12px rgba(20, 20, 19, 0.14);
+        }
+
+        .bubble-pink-text {
+            font-family: 'Anton', sans-serif;
+            font-weight: 400;
+            color: #141413;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+        }
+        .dark .bubble-pink-text {
+            color: #ffffff;
+        }
+
+        .editorial-card {
+            background: #ffffff;
+            border: 1.5px solid #141413;
+            box-shadow: 0 14px 34px -8px rgba(20, 20, 19, 0.08);
+        }
+
+        .dark .editorial-card {
+            background: rgba(19, 28, 46, 0.96);
+            border-color: rgba(148, 163, 184, 0.35);
+            box-shadow: 0 14px 34px -8px rgba(0, 0, 0, 0.5);
+        }
+
+        .browser-bar {
+            background: #f1efe9;
+            border-bottom: 1.5px solid #141413;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .dark .browser-bar {
+            background: #0f172a;
+            border-bottom-color: rgba(148, 163, 184, 0.35);
+        }
+
+        .folder-tab {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 18px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            border: 1.5px solid #141413;
+            border-bottom: none;
+            border-radius: 14px 14px 0 0;
+            position: relative;
+            z-index: 10;
+            margin-bottom: -1.5px;
+        }
+        .dark .folder-tab {
+            border-color: rgba(148, 163, 184, 0.4);
+        }
+
+        .selection-box {
+            border: 1.5px solid #f43f5e;
+            background: rgba(244, 63, 94, 0.03);
+            position: relative;
+        }
+        .selection-handle {
+            width: 7px;
+            height: 7px;
+            background: #ffffff;
+            border: 1.5px solid #f43f5e;
+            position: absolute;
+        }
+
+        .mac-folder {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+        }
+        .mac-folder:hover {
+            transform: translateY(-5px) scale(1.06) rotate(0deg) !important;
+        }
+
+        .washi-tape {
+            background: rgba(254, 240, 138, 0.78);
+            border-left: 2px dashed rgba(20, 20, 19, 0.25);
+            border-right: 2px dashed rgba(20, 20, 19, 0.25);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+        }
+
+        .dark .washi-tape {
+            background: rgba(236, 72, 153, 0.28);
+            border-left: 2px dashed rgba(244, 114, 182, 0.5);
+            border-right: 2px dashed rgba(244, 114, 182, 0.5);
+        }
+
+        .btn-pink-glossy {
+            background: #141413;
+            color: #ffffff;
+            border: 1.5px solid #141413;
+            box-shadow: 3px 3px 0px #ec4899;
+            transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .dark .btn-pink-glossy {
+            background: #ec4899;
+            border-color: #ffffff;
+            box-shadow: 3px 3px 0px #ffffff;
+        }
+        .btn-pink-glossy:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0px #ec4899;
+        }
+
+        .btn-cream-sticker {
+            background: #ffffff;
+            color: #141413;
+            border: 1.5px solid #141413;
+            box-shadow: 3px 3px 0px #141413;
+            transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .dark .btn-cream-sticker {
+            background: #1e293b;
+            color: #f3f4f6;
+            border-color: #64748b;
+            box-shadow: 3px 3px 0px #ec4899;
+        }
+        .btn-cream-sticker:hover {
+            background: #fef08a;
+            color: #141413;
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0px #141413;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.7); }
+            50% { transform: scale(1.05); box-shadow: 0 0 0 16px rgba(236, 72, 153, 0); }
+        }
+        .pulse-tour {
+            animation: pulseGlow 2s infinite;
+        }
+
+        @keyframes highlightPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.95), 0 0 35px rgba(236, 72, 153, 0.85); border-color: #ec4899; transform: scale(1.02); }
+            50% { box-shadow: 0 0 0 18px rgba(236, 72, 153, 0), 0 0 50px rgba(236, 72, 153, 1); border-color: #f472b6; transform: scale(1.04); }
+        }
+        .tour-spotlight-highlight {
+            animation: highlightPulse 1.2s infinite ease-in-out !important;
+            z-index: 215 !important;
+            position: relative !important;
+            background-color: #ffffff !important;
+        }
+        .dark .tour-spotlight-highlight {
+            background-color: #1f2937 !important;
+        }
+
+        @keyframes chartPulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.95), 0 0 25px rgba(236, 72, 153, 0.7); border-color: #ec4899; }
+            50% { box-shadow: 0 0 0 14px rgba(236, 72, 153, 0), 0 0 40px rgba(236, 72, 153, 0.9); border-color: #f472b6; }
+        }
+        .chart-spotlight-highlight {
+            animation: chartPulseGlow 1.2s infinite ease-in-out !important;
+            position: relative !important;
+            z-index: 215 !important;
+        }
+
+        #tour-spotlight-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(11, 15, 25, 0.9);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+            z-index: 200;
+            display: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .tool-badge-pill {
+            background: #ffffff;
+            border: 1.5px solid #141413;
+            border-radius: 12px;
+            padding: 5px 10px;
+            box-shadow: 2px 2px 0px #141413;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 38px;
+            cursor: pointer;
+            transition: transform 0.22s ease, box-shadow 0.22s ease;
+        }
+        .tool-badge-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 3px 3px 0px #ec4899;
+            border-color: #ec4899;
+        }
+        .dark .tool-badge-pill {
+            background: rgba(31, 41, 55, 0.95);
+            border-color: #f472b6;
+            box-shadow: 2px 2px 0px #f472b6;
+        }
+
+        .logo-nobg {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            mix-blend-mode: multiply;
+        }
+        .dark .logo-nobg {
+            mix-blend-mode: normal;
+            background: rgba(255, 255, 255, 0.95) !important;
+            padding: 6px 10px !important;
+            border-radius: 14px !important;
+        }
+
+        .brand-logo-showcase {
+            background: #ffffff;
+            border: 1.5px solid #141413;
+            box-shadow: 4px 4px 0px #141413;
+            border-radius: 18px;
+            padding: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .brand-logo-showcase:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 6px 6px 0px #ec4899;
+        }
+        .dark .brand-logo-showcase {
+            border-color: #f472b6;
+            box-shadow: 4px 4px 0px #f472b6;
+            background: #1f2937;
+        }
+
+        .nav-link-active {
+            background-color: #141413 !important;
+            color: #ffffff !important;
+        }
+        .dark .nav-link-active {
+            background-color: #ec4899 !important;
+            color: #ffffff !important;
+        }
+
+        .metric-card-header {
+            background: #141413;
+            color: #ffffff;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 8px 14px;
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .dark .metric-card-header {
+            background: #0f172a;
+            border-bottom: 1px solid #334155;
+        }
+
+        #lightbox-backdrop {
+            transform: translate3d(0, 0, 0);
+            will-change: opacity;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            background: rgba(11, 15, 25, 0.94) !important;
+            backdrop-filter: blur(28px) !important;
+            -webkit-backdrop-filter: blur(28px) !important;
+        }
+        #lightbox-img {
+            max-width: 90vw;
+            max-height: 72vh;
+            object-fit: contain;
+            transform: translate3d(0, 0, 0) scale(0.96);
+            opacity: 0;
+            will-change: transform, opacity;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s ease-out;
+        }
+        #lightbox-backdrop.lightbox-open #lightbox-img {
+            transform: translate3d(0, 0, 0) scale(1);
+            opacity: 1;
+        }
+
+        @keyframes marqueeLeft {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+        @keyframes marqueeRight {
+            0% { transform: translate3d(-50%, 0, 0); }
+            100% { transform: translate3d(0, 0, 0); }
+        }
+        .marquee-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            mask-image: linear-gradient(to right, transparent, black 7%, black 93%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 7%, black 93%, transparent);
+        }
+        .marquee-track-left {
+            display: flex;
+            width: max-content;
+            animation: marqueeLeft 42s linear infinite;
+            will-change: transform;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        .marquee-track-right {
+            display: flex;
+            width: max-content;
+            animation: marqueeRight 48s linear infinite;
+            will-change: transform;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        .marquee-container:hover .marquee-track-left,
+        .marquee-container:hover .marquee-track-right {
+            animation-play-state: paused;
+        }
+
+        @keyframes bounceCat {
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+            50% { transform: translateY(-16px) rotate(4deg) scale(1.08); }
+        }
+        .animated-hello-cat {
+            animation: bounceCat 2.2s ease-in-out infinite;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f8f6f0;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f472b6;
+            border-radius: 9999px;
+            border: 2px solid #f8f6f0;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #ec4899;
+            border-color: #0b0f19;
+        }
+
+        @media print {
+            .no-print { display: none !important; }
+            body { background: #fff !important; color: #000 !important; }
+        }
+    </style>
+</head>
+<body class="relative min-h-screen antialiased selection:bg-pink-300 selection:text-ink">
+
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[700px] h-[380px] bg-pink-300/25 dark:bg-blue-600/10 rounded-full blur-[120px]"></div>
+        <div class="absolute top-[35%] -left-24 w-[450px] h-[450px] bg-rose-200/35 dark:bg-pink-600/10 rounded-full blur-[110px]"></div>
+        <div class="absolute bottom-12 -right-24 w-[550px] h-[550px] bg-pink-200/30 dark:bg-indigo-600/10 rounded-full blur-[130px]"></div>
+    </div>
+
+    <div id="tour-spotlight-backdrop"></div>
+
+    <div class="fixed bottom-6 left-6 z-50 no-print">
+        <button id="tour-trigger-btn" onclick="startPortfolioTour()" class="btn-pink-glossy px-4 py-3 rounded-full font-display font-bold text-xs flex items-center gap-2 shadow-pink-sticker pulse-tour">
+            <span class="text-base">✨</span>
+            <span>How to Explore Portfolio</span>
+        </button>
+    </div>
+
+    <header id="main-site-header" class="fixed top-0 left-0 right-0 z-[220] px-4 sm:px-8 pt-4 no-print">
+        <nav id="navbar-element" class="max-w-6xl mx-auto editorial-card rounded-full px-6 py-3 flex items-center justify-between border-2 border-stone-800/15 transition-all duration-300">
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-rose-600 border-2 border-ink dark:border-pink-300 shadow-sticker flex items-center justify-center font-display text-sm font-bold text-white transition-transform group-hover:rotate-12">
+                    CP
+                </div>
+                <div>
+                    <span class="font-display font-extrabold text-ink dark:text-white tracking-tight text-xs sm:text-base block leading-none">CHATCHANA P. (NEPJUNE)</span>
+                    <span class="font-mono text-[10px] text-pink-600 dark:text-pink-400 tracking-widest uppercase mt-1 block">MARKETING • BRAND STRATEGY • COMMERCIAL FINANCE ✨</span>
+                </div>
+            </a>
+
+            <div id="nav-menu-links" class="hidden md:flex items-center gap-1 bg-stone-100/90 dark:bg-slate-800/90 border border-stone-300/80 dark:border-slate-700 rounded-full p-1">
+                <a href="#hero" id="nav-btn-about" data-section="hero" class="nav-spy-link nav-link-active px-4 py-1.5 rounded-full text-xs font-semibold text-stone-700 dark:text-stone-300 hover:text-ink dark:hover:text-white hover:bg-pink-200/70 dark:hover:bg-pink-900/50 transition-all">01. About</a>
+                <a href="#skills" id="nav-btn-edge" data-section="skills" class="nav-spy-link px-4 py-1.5 rounded-full text-xs font-semibold text-stone-700 dark:text-stone-300 hover:text-ink dark:hover:text-white hover:bg-pink-200/70 dark:hover:bg-pink-900/50 transition-all">02. Marketing Edge</a>
+                <a href="#projects" id="nav-btn-campaigns" data-section="projects" class="nav-spy-link px-4 py-1.5 rounded-full text-xs font-semibold text-stone-700 dark:text-stone-300 hover:text-ink dark:hover:text-white hover:bg-pink-200/70 dark:hover:bg-pink-900/50 transition-all">03. Campaigns</a>
+                <a href="#leadership-section" id="nav-btn-leadership" data-section="leadership-section" class="nav-spy-link px-4 py-1.5 rounded-full text-xs font-semibold text-stone-700 dark:text-stone-300 hover:text-ink dark:hover:text-white hover:bg-pink-200/70 dark:hover:bg-pink-900/50 transition-all">04. Leadership</a>
+                <a href="#contact" id="nav-btn-contact" data-section="contact" class="nav-spy-link px-4 py-1.5 rounded-full text-xs font-semibold text-stone-700 dark:text-stone-300 hover:text-ink dark:hover:text-white hover:bg-pink-200/70 dark:hover:bg-pink-900/50 transition-all">05. Contact</a>
+            </div>
+
+            <div class="flex items-center gap-2.5">
+                <button id="theme-toggle-btn" onclick="toggleDarkMode()" class="w-9 h-9 rounded-full bg-white dark:bg-slate-800 border-2 border-stone-800 dark:border-slate-600 flex items-center justify-center text-xs shadow-sm hover:scale-110 transition-transform" title="Toggle Dark/Light Mode">
+                    <span id="theme-icon">🌙</span>
+                </button>
+                <button id="full-cv-btn-el" onclick="openCVModal()" class="btn-cream-sticker px-4 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 hover:scale-105 transition-transform">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-pink-500"></i>
+                    <span>Full CV</span>
+                </button>
+                <button onclick="toggleMobileMenu()" class="md:hidden w-9 h-9 rounded-full bg-white dark:bg-slate-800 border-2 border-stone-800 dark:border-slate-600 flex items-center justify-center text-xs shadow-sm" title="Open Navigation Menu">
+                    <i data-lucide="menu" class="w-4 h-4 text-ink dark:text-white"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu-drawer" class="hidden md:hidden max-w-6xl mx-auto mt-2 editorial-card rounded-2xl p-4 border-2 border-stone-800/20 shadow-xl space-y-2 bg-white/95 dark:bg-slate-900/95">
+            <div class="flex items-center justify-between pb-2 border-b border-stone-200 dark:border-slate-800">
+                <span class="font-mono text-xs font-bold uppercase text-pink-600">Table of Contents</span>
+                <button onclick="toggleMobileMenu()" class="w-6 h-6 rounded-full bg-stone-100 dark:bg-slate-800 flex items-center justify-center text-xs">✕</button>
+            </div>
+            <div class="flex flex-col space-y-1.5 font-semibold text-xs">
+                <a href="#hero" onclick="toggleMobileMenu()" class="px-4 py-2 rounded-xl hover:bg-pink-100 dark:hover:bg-slate-800 transition-colors">01. About (Hero)</a>
+                <a href="#skills" onclick="toggleMobileMenu()" class="px-4 py-2 rounded-xl hover:bg-pink-100 dark:hover:bg-slate-800 transition-colors">02. Marketing Edge & Pillars</a>
+                <a href="#projects" onclick="toggleMobileMenu()" class="px-4 py-2 rounded-xl hover:bg-pink-100 dark:hover:bg-slate-800 transition-colors">03. Campaigns & Case Studies</a>
+                <a href="#leadership-section" onclick="toggleMobileMenu()" class="px-4 py-2 rounded-xl hover:bg-pink-100 dark:hover:bg-slate-800 transition-colors">04. Leadership & PR</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="px-4 py-2 rounded-xl hover:bg-pink-100 dark:hover:bg-slate-800 transition-colors">05. Contact & Wrap</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-24 space-y-16">
+
+        <section id="hero" class="relative min-h-[85vh] flex flex-col justify-center" data-aos="fade-up" data-aos-duration="1000">
+            <div class="editorial-card rounded-[28px] overflow-hidden border-2 border-ink dark:border-slate-700 shadow-window">
+                
+                <div class="browser-bar">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-[#ff5f56] border border-black/20 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-[#ffbd2e] border border-black/20 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-[#27c93f] border border-black/20 inline-block"></span>
+                        <span class="hidden sm:inline-block ml-2 font-mono text-[11px] font-bold text-stone-600 dark:text-stone-300">PORTFOLIO_MEDIA_KIT_2026.FIG</span>
+                    </div>
+                    <div class="flex-1 max-w-md mx-auto hidden md:flex items-center justify-center gap-2 bg-white dark:bg-slate-800 border border-stone-300 dark:border-slate-600 rounded-full px-4 py-1 text-[11px] font-mono text-stone-500 dark:text-stone-300 shadow-inner">
+                        <i data-lucide="lock" class="w-3 h-3 text-emerald-600"></i>
+                        <span>nepjune-portfolio.com/marketing-strategy</span>
+                    </div>
+                    <div class="flex items-center gap-2 font-mono text-[10px] font-bold text-stone-600 dark:text-stone-300">
+                        <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-400">● OPEN TO WORK</span>
+                    </div>
+                </div>
+
+                <div class="p-6 sm:p-10 lg:p-12 space-y-8 bg-white/95 dark:bg-slate-900/95">
+                    
+                    <div class="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-stone-200 dark:border-slate-800 text-xs font-mono text-stone-500 dark:text-stone-400">
+                        <div class="flex items-center gap-2">
+                            <span class="px-2.5 py-1 rounded-md bg-stone-900 text-white dark:bg-pink-500 font-bold text-[10px]">SLIDE 01</span>
+                            <span class="font-semibold text-ink dark:text-white">EXECUTIVE MARKETING &amp; COMMERCIAL PROFILE</span>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-3">
+                            <span class="px-3 py-1 rounded-full bg-amber-100/90 dark:bg-pink-950 text-ink dark:text-pink-200 font-bold border border-ink dark:border-pink-700 text-[11px]">
+                                ✦ BSc 1st Class Hons (UK) Accounting &amp; Finance
+                            </span>
+                            <span class="logo-nobg">
+                                <img src="https://i.postimg.cc/vZZqTL5G/IMG-3190.png" alt="Coventry University UK" class="h-10 sm:h-12 w-auto object-contain transition-transform hover:scale-105" />
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center py-2">
+                        
+                        <div class="lg:col-span-7 space-y-6 text-left">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-100 dark:bg-slate-800 border border-stone-300 dark:border-slate-700 text-xs font-mono text-stone-700 dark:text-stone-300">
+                                <span>👋 Hi, nice to meet you! I'm <strong class="text-pink-600 dark:text-pink-400">Nepjune</strong></span>
+                            </div>
+
+                            <div class="relative pt-2 overflow-visible">
+                                <span class="font-serifItalic italic text-3xl sm:text-5xl text-pink-600 dark:text-pink-400 block -mb-2 sm:-mb-3 relative z-20 drop-shadow-sm">
+                                    Marketing &amp; Growth
+                                </span>
+                                <h1 class="bubble-pink-text text-4xl sm:text-6xl md:text-7xl xl:text-[76px] leading-[0.92] tracking-tight text-ink dark:text-white break-words">
+                                    PORTFOLIO
+                                </h1>
+                            </div>
+
+                            <div class="inline-block selection-box px-4 py-2.5 rounded-lg">
+                                <span class="selection-handle -top-1 -left-1"></span>
+                                <span class="selection-handle -top-1 -right-1"></span>
+                                <span class="selection-handle -bottom-1 -left-1"></span>
+                                <span class="selection-handle -bottom-1 -right-1"></span>
+                                <div class="flex flex-wrap items-center gap-2.5">
+                                    <span class="font-display font-extrabold text-xl sm:text-2xl text-ink dark:text-white tracking-tight">
+                                        CHATCHANA PHOPLAP (NEPJUNE)
+                                    </span>
+                                    <span class="px-2.5 py-0.5 rounded bg-butter text-ink font-mono text-[11px] font-bold border border-ink">
+                                        MARKETING &amp; BRAND STRATEGIST
+                                    </span>
+                                </div>
+                            </div>
+
+                            <p class="text-sm sm:text-base text-stone-600 dark:text-stone-300 leading-relaxed max-w-2xl">
+                                Bridging <span class="px-1.5 py-0.5 rounded bg-pink-200/80 dark:bg-pink-900/60 text-ink dark:text-pink-100 font-semibold">creative brand storytelling &amp; R&amp;D</span> with <span class="px-1.5 py-0.5 rounded bg-amber-200/80 dark:bg-slate-700 text-ink dark:text-slate-100 font-semibold">rigorous financial &amp; ROI analytics</span>. Proven track record scaling F&amp;B net sales by up to <strong class="text-ink dark:text-white underline decoration-pink-500 decoration-2">+86.4%</strong>, achieving <strong class="text-ink dark:text-white">Airbnb Superhost</strong> across a 10-property portfolio, and managing full-cycle accounting &amp; tax compliance across <strong class="text-ink dark:text-white">33 global &amp; domestic insurance partners</strong>.
+                            </p>
+
+                            <div class="grid grid-cols-3 gap-3 pt-1 max-w-xl">
+                                <div class="p-3 rounded-xl bg-stone-50 dark:bg-slate-800 border border-stone-300 dark:border-slate-700">
+                                    <span class="font-mono text-[10px] text-stone-500 dark:text-stone-400 block uppercase">PEAK SALES SURGE</span>
+                                    <span class="font-condensed text-2xl sm:text-3xl text-pink-600 dark:text-pink-400">+86.4%</span>
+                                </div>
+                                <div class="p-3 rounded-xl bg-stone-50 dark:bg-slate-800 border border-stone-300 dark:border-slate-700">
+                                    <span class="font-mono text-[10px] text-stone-500 dark:text-stone-400 block uppercase">REALTY PORTFOLIO</span>
+                                    <span class="font-condensed text-2xl sm:text-3xl text-ink dark:text-white">10 ASSETS ★</span>
+                                </div>
+                                <div class="p-3 rounded-xl bg-stone-50 dark:bg-slate-800 border border-stone-300 dark:border-slate-700">
+                                    <span class="font-mono text-[10px] text-stone-500 dark:text-stone-400 block uppercase">B2B TAX &amp; INSURERS</span>
+                                    <span class="font-condensed text-2xl sm:text-3xl text-emerald-700 dark:text-emerald-400">33 PARTNERS</span>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap items-center gap-3 pt-2">
+                                <a href="#projects" class="btn-pink-glossy px-6 py-3 rounded-xl font-mono font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+                                    <span>Explore Case Studies</span>
+                                    <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+                                </a>
+                                <a href="#contact" class="btn-cream-sticker px-5 py-3 rounded-xl font-mono font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+                                    <span>Let's Connect</span>
+                                    <i data-lucide="send" class="w-3.5 h-3.5 text-pink-600"></i>
+                                </a>
+                                <button onclick="openCVModal()" class="px-4 py-3 rounded-xl bg-stone-100 dark:bg-slate-800 hover:bg-stone-200 border border-stone-300 dark:border-slate-700 font-mono text-xs font-semibold text-ink dark:text-white flex items-center gap-1.5 transition-colors">
+                                    <i data-lucide="file-text" class="w-3.5 h-3.5 text-pink-600"></i>
+                                    <span>Media Kit / CV</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-5 relative flex items-center justify-center py-6">
+                            
+                            <a href="#cafe-case" class="mac-folder absolute -top-2 left-2 sm:left-4 z-30 flex flex-col items-center group" style="transform: rotate(-6deg);">
+                                <div class="w-16 h-12 sm:w-20 sm:h-14 rounded-lg bg-pink-300 border-2 border-ink shadow-sticker flex items-center justify-center relative">
+                                    <div class="w-7 h-2.5 bg-pink-400 border-2 border-b-0 border-ink rounded-t-md absolute -top-2.5 left-1.5"></div>
+                                    <i data-lucide="coffee" class="w-5 h-5 text-ink"></i>
+                                </div>
+                                <span class="mt-1 px-2 py-0.5 rounded bg-white dark:bg-slate-900 border border-ink text-[10px] font-mono font-bold text-ink dark:text-white shadow-sm">cafe_r&amp;d_01</span>
+                            </a>
+
+                            <a href="#realestate-case" class="mac-folder absolute -top-1 right-2 sm:right-4 z-30 flex flex-col items-center group" style="transform: rotate(6deg);">
+                                <div class="w-16 h-12 sm:w-20 sm:h-14 rounded-lg bg-peachFolder border-2 border-ink shadow-sticker flex items-center justify-center relative">
+                                    <div class="w-7 h-2.5 bg-orange-400 border-2 border-b-0 border-ink rounded-t-md absolute -top-2.5 left-1.5"></div>
+                                    <i data-lucide="building-2" class="w-5 h-5 text-ink"></i>
+                                </div>
+                                <span class="mt-1 px-2 py-0.5 rounded bg-white dark:bg-slate-900 border border-ink text-[10px] font-mono font-bold text-ink dark:text-white shadow-sm">realty_roi_02</span>
+                            </a>
+
+                            <a href="#insurance-case" class="mac-folder absolute -bottom-2 left-1 sm:left-3 z-30 flex flex-col items-center group" style="transform: rotate(5deg);">
+                                <div class="w-16 h-12 sm:w-20 sm:h-14 rounded-lg bg-skyFolder border-2 border-ink shadow-sticker flex items-center justify-center relative">
+                                    <div class="w-7 h-2.5 bg-blue-400 border-2 border-b-0 border-ink rounded-t-md absolute -top-2.5 left-1.5"></div>
+                                    <i data-lucide="shield-check" class="w-5 h-5 text-ink"></i>
+                                </div>
+                                <span class="mt-1 px-2 py-0.5 rounded bg-white dark:bg-slate-900 border border-ink text-[10px] font-mono font-bold text-ink dark:text-white shadow-sm">b2b_tax_03</span>
+                            </a>
+
+                            <a href="#leadership-section" class="mac-folder absolute -bottom-2 right-1 sm:right-3 z-30 flex flex-col items-center group" style="transform: rotate(-5deg);">
+                                <div class="w-16 h-12 sm:w-20 sm:h-14 rounded-lg bg-mintFolder border-2 border-ink shadow-sticker flex items-center justify-center relative">
+                                    <div class="w-7 h-2.5 bg-lime-400 border-2 border-b-0 border-ink rounded-t-md absolute -top-2.5 left-1.5"></div>
+                                    <i data-lucide="globe" class="w-5 h-5 text-ink"></i>
+                                </div>
+                                <span class="mt-1 px-2 py-0.5 rounded bg-white dark:bg-slate-900 border border-ink text-[10px] font-mono font-bold text-ink dark:text-white shadow-sm">global_pr_04</span>
+                            </a>
+
+                            <div id="hero-portrait-container" onclick="openLightbox(0, 'hero')" class="w-60 sm:w-68 rounded-2xl bg-white dark:bg-slate-800 p-3 pb-4 border-2 border-ink dark:border-slate-500 shadow-sticker cursor-pointer relative z-20 transition-transform duration-300 hover:scale-[1.02]">
+                                <div class="washi-tape w-28 h-6 absolute -top-3 left-1/2 -translate-x-1/2 rotate-[-2deg] z-30"></div>
+                                <div class="w-full aspect-[4/4.6] rounded-xl overflow-hidden bg-stone-100 border border-stone-200 dark:border-slate-700">
+                                    <img src="https://i.postimg.cc/x1b5kWVH/9ADF1D9D-4668-47A2-98ED-9CBF78B35501.jpg" alt="Chatchana Phoplap (Nepjune)" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" onerror="this.src='https://placehold.co/300x360/f472b6/ffffff?text=Nepjune'" />
+                                </div>
+                                <div class="mt-3 px-1 flex items-center justify-between text-[10px] font-mono">
+                                    <span class="font-bold text-ink dark:text-white tracking-tight">CHATCHANA PHOPLAP</span>
+                                    <span class="px-2 py-0.5 rounded bg-pink-100 dark:bg-pink-950 text-pink-700 dark:text-pink-300 font-bold">🔍 Zoom</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-stone-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-stone-500 dark:text-stone-400">
+                        <span>📍 SINGAPORE • UNITED KINGDOM • THAILAND</span>
+                        <span class="text-ink dark:text-white font-semibold">Promotional Strategy • Market Research (R&amp;D) • Revenue &amp; ROI Optimization</span>
+                        <span>📧 chatchanaphoplap@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="scroll-mt-24 py-8" data-aos="fade-up" data-aos-duration="1000">
+            <div class="editorial-card rounded-[28px] overflow-hidden border-2 border-ink dark:border-slate-700 shadow-window">
+                
+                <div class="browser-bar">
+                    <div class="flex items-center gap-2">
+                        <span class="px-2.5 py-0.5 rounded bg-ink text-white dark:bg-pink-500 font-mono text-[10px] font-bold">SLIDE 02</span>
+                        <span class="font-mono text-xs font-bold uppercase text-ink dark:text-white">// MY WORK INCLUDES &amp; COMMERCIAL EDGE</span>
+                    </div>
+                    <span class="font-mono text-[11px] font-bold text-pink-600 dark:text-pink-400">THE COMMERCIAL CREATIVE</span>
+                </div>
+
+                <div class="p-6 sm:p-10 space-y-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-5 space-y-4">
+                            <span class="font-serifItalic italic text-3xl sm:text-4xl text-pink-600 dark:text-pink-400 block -mb-2">
+                                Commercial &amp; Creative
+                            </span>
+                            <h2 class="bubble-pink-text text-4xl sm:text-5xl text-ink dark:text-white leading-none">
+                                MY WORK INCLUDES
+                            </h2>
+                            <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
+                                Combining a <strong class="text-ink dark:text-white">First-Class Honours degree (Coventry University, UK)</strong> in Accounting and Finance with hands-on campaign execution, turning market research (R&amp;D), unit-cost pricing, and multi-channel promotions into measurable top-line growth.
+                            </p>
+                            <div class="flex flex-wrap items-center gap-4 pt-1">
+                                <span class="logo-nobg">
+                                    <img src="https://i.postimg.cc/vZZqTL5G/IMG-3190.png" alt="Coventry University UK" class="h-12 sm:h-14 w-auto object-contain" />
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="p-4 rounded-2xl bg-stone-50 dark:bg-slate-800 border-2 border-ink dark:border-slate-600 shadow-sticker flex flex-col justify-between space-y-3">
+                                <div class="w-10 h-10 rounded-xl bg-pink-200 border border-ink flex items-center justify-center text-ink">
+                                    <i data-lucide="megaphone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="font-mono text-[10px] font-bold text-pink-600 dark:text-pink-400 uppercase">01 // ACQUISITION</span>
+                                    <h3 class="font-display font-extrabold text-sm text-ink dark:text-white mt-0.5">CAMPAIGNS &amp; CRM</h3>
+                                    <p class="text-[11px] text-stone-600 dark:text-stone-300 mt-1 leading-relaxed">
+                                        LINE OA Rich Menus, paid Meta/Google ads, local SEO, and viral review loops.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-stone-50 dark:bg-slate-800 border-2 border-ink dark:border-slate-600 shadow-sticker flex flex-col justify-between space-y-3">
+                                <div class="w-10 h-10 rounded-xl bg-butter border border-ink flex items-center justify-center text-ink">
+                                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="font-mono text-[10px] font-bold text-amber-700 dark:text-amber-400 uppercase">02 // PRODUCT R&amp;D</span>
+                                    <h3 class="font-display font-extrabold text-sm text-ink dark:text-white mt-0.5">CREATIVE &amp; MENU R&amp;D</h3>
+                                    <p class="text-[11px] text-stone-600 dark:text-stone-300 mt-1 leading-relaxed">
+                                        Signature menu ideation, food styling, Canva ad design, and condo feasibility.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-stone-50 dark:bg-slate-800 border-2 border-ink dark:border-slate-600 shadow-sticker flex flex-col justify-between space-y-3">
+                                <div class="w-10 h-10 rounded-xl bg-mintFolder border border-ink flex items-center justify-center text-ink">
+                                    <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="font-mono text-[10px] font-bold text-lime-800 dark:text-lime-400 uppercase">03 // COMMERCIAL</span>
+                                    <h3 class="font-display font-extrabold text-sm text-ink dark:text-white mt-0.5">PRICING, ROI &amp; TAX</h3>
+                                    <p class="text-[11px] text-stone-600 dark:text-stone-300 mt-1 leading-relaxed">
+                                        Charm pricing, bundle unit economics, 50+ CIT/VAT filings, and B2B reconciliation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t-2 border-stone-200 dark:border-slate-800">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-5">
+                            <h3 class="bubble-pink-text text-3xl sm:text-4xl text-ink dark:text-white tracking-wide">
+                                COMMERCIAL PERFORMANCE &amp; CORE PILLARS
+                            </h3>
+                            <span class="px-3 py-1 rounded-full bg-stone-900 text-white dark:bg-pink-500 font-mono text-xs font-bold">
+                                ● AUDITED KPI TRAJECTORY
+                            </span>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                            <div class="lg:col-span-5 rounded-2xl border-2 border-ink dark:border-slate-600 bg-white dark:bg-slate-900 shadow-sticker overflow-hidden flex flex-col justify-between">
+                                <div class="metric-card-header">
+                                    <span>AUDITED GROWTH TRAJECTORY</span>
+                                    <span class="text-pink-400">+86.4% PEAK SURGE</span>
+                                </div>
+                                <div class="p-4 flex-1 flex flex-col justify-center">
+                                    <svg viewBox="0 0 380 215" class="w-full h-52 overflow-visible">
+                                        <defs>
+                                            <linearGradient id="curveAreaGrad" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="0%" stop-color="#ec4899" stop-opacity="0.32" />
+                                                <stop offset="100%" stop-color="#ec4899" stop-opacity="0.0" />
+                                            </linearGradient>
+                                            <filter id="pillShadow" x="-15%" y="-15%" width="130%" height="140%">
+                                                <feDropShadow dx="1.5" dy="2" stdDeviation="0" flood-color="#111827" />
+                                            </filter>
+                                        </defs>
+
+                                        <line x1="22" y1="35" x2="358" y2="35" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4" />
+                                        <line x1="22" y1="78" x2="358" y2="78" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4" />
+                                        <line x1="22" y1="121" x2="358" y2="121" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4" />
+                                        <line x1="20" y1="164" x2="360" y2="164" stroke="#111827" stroke-width="2" stroke-linecap="round" />
+
+                                        <path d="M 60 135 C 110 120, 160 85, 210 65 C 260 45, 310 28, 325 24 L 325 164 L 60 164 Z" fill="url(#curveAreaGrad)" />
+                                        <path d="M 60 135 C 110 120, 160 85, 210 65 C 260 45, 310 28, 325 24" fill="none" stroke="#ec4899" stroke-width="4" stroke-linecap="round" />
+
+                                        <circle cx="60" cy="135" r="5" fill="#ffffff" stroke="#111827" stroke-width="2.5" />
+                                        <circle cx="135" cy="100" r="5" fill="#ffffff" stroke="#111827" stroke-width="2.5" />
+                                        <circle cx="210" cy="65" r="5" fill="#ffffff" stroke="#111827" stroke-width="2.5" />
+                                        <circle cx="325" cy="24" r="7" fill="#ec4899" stroke="#111827" stroke-width="3" />
+
+                                        <g filter="url(#pillShadow)">
+                                            <rect x="25" y="105" width="70" height="22" rx="6" fill="#ffffff" stroke="#111827" stroke-width="1.5" />
+                                            <text x="60" y="120" text-anchor="middle" fill="#111827" font-size="9.5" font-weight="bold" font-family="JetBrains Mono">+28.6% Cafe</text>
+                                        </g>
+                                        <g filter="url(#pillShadow)">
+                                            <rect x="172" y="38" width="76" height="22" rx="6" fill="#fde047" stroke="#111827" stroke-width="1.5" />
+                                            <text x="210" y="53" text-anchor="middle" fill="#111827" font-size="9.5" font-weight="bold" font-family="JetBrains Mono">10 Properties</text>
+                                        </g>
+                                        <g filter="url(#pillShadow)">
+                                            <rect x="268" y="2" width="102" height="24" rx="6" fill="#111827" stroke="#ec4899" stroke-width="2" />
+                                            <text x="319" y="18" text-anchor="middle" fill="#f9a8d4" font-size="10" font-weight="bold" font-family="JetBrains Mono">+86.4% Peak Sales</text>
+                                        </g>
+
+                                        <text x="60" y="183" text-anchor="middle" fill="#db2777" font-weight="bold" font-size="10" font-family="JetBrains Mono">Aug '24</text>
+                                        <text x="60" y="196" text-anchor="middle" fill="#6b7280" font-size="8.5" font-family="Inter">F&amp;B R&amp;D</text>
+
+                                        <text x="135" y="183" text-anchor="middle" fill="#374151" font-weight="bold" font-size="10" font-family="JetBrains Mono">Sep-Oct</text>
+                                        <text x="135" y="196" text-anchor="middle" fill="#6b7280" font-size="8.5" font-family="Inter">Sales Surge</text>
+
+                                        <text x="210" y="183" text-anchor="middle" fill="#db2777" font-weight="bold" font-size="10" font-family="JetBrains Mono">Dec '24</text>
+                                        <text x="210" y="196" text-anchor="middle" fill="#6b7280" font-size="8.5" font-family="Inter">Superhost ★</text>
+
+                                        <text x="325" y="183" text-anchor="middle" fill="#111827" font-weight="bold" font-size="10" font-family="JetBrains Mono">2025+</text>
+                                        <text x="325" y="196" text-anchor="middle" fill="#6b7280" font-size="8.5" font-family="Inter">B2B Finance</text>
+                                    </svg>
+                                </div>
+                                <div class="px-4 py-2.5 bg-stone-100 dark:bg-slate-800 border-t border-stone-200 dark:border-slate-700 text-[11px] font-mono text-stone-600 dark:text-stone-400 flex items-center justify-between">
+                                    <span>■ Verified Across Cafe, Realty &amp; Insurance</span>
+                                    <span class="font-bold text-ink dark:text-white">100% Audit Accuracy</span>
+                                </div>
+                            </div>
+
+                            <div id="marketing-pillars-container" class="lg:col-span-7 flex flex-col justify-between space-y-5">
+                                <div>
+                                    <p class="text-xs font-mono uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-3 font-bold">
+                                        CLICK ANY COMPETENCY TAG TO INSPECT METRICS &amp; WORKFLOW:
+                                    </p>
+                                    <div class="flex flex-wrap gap-2.5">
+                                        <button onclick="selectSkill('campaign')" id="pill-campaign" class="skill-pill px-4 py-2.5 rounded-xl font-display font-bold text-xs sm:text-sm flex items-center gap-2 bg-pink-500 text-white border-2 border-ink dark:border-pink-400 shadow-sticker transition-all hover:scale-105">
+                                            <i data-lucide="megaphone" class="w-4 h-4"></i>
+                                            <span>Promotional Campaigns</span>
+                                        </button>
+                                        <button onclick="selectSkill('research')" id="pill-research" class="skill-pill px-4 py-2.5 rounded-xl font-display font-bold text-xs sm:text-sm flex items-center gap-2 bg-white dark:bg-slate-800 text-ink dark:text-white border-2 border-ink dark:border-slate-600 hover:bg-butter transition-all hover:scale-105">
+                                            <i data-lucide="search" class="w-4 h-4 text-pink-500"></i>
+                                            <span>Market Research &amp; R&amp;D</span>
+                                        </button>
+                                        <button onclick="selectSkill('pricing')" id="pill-pricing" class="skill-pill px-4 py-2.5 rounded-xl font-display font-bold text-xs sm:text-sm flex items-center gap-2 bg-white dark:bg-slate-800 text-ink dark:text-white border-2 border-ink dark:border-slate-600 hover:bg-butter transition-all hover:scale-105">
+                                            <i data-lucide="trending-up" class="w-4 h-4 text-pink-500"></i>
+                                            <span>Pricing, Finance &amp; Tax</span>
+                                        </button>
+                                        <button onclick="selectSkill('outreach')" id="pill-outreach" class="skill-pill px-4 py-2.5 rounded-xl font-display font-bold text-xs sm:text-sm flex items-center gap-2 bg-white dark:bg-slate-800 text-ink dark:text-white border-2 border-ink dark:border-slate-600 hover:bg-butter transition-all hover:scale-105">
+                                            <i data-lucide="users" class="w-4 h-4 text-pink-500"></i>
+                                            <span>Public Engagement &amp; Event PR</span>
+                                        </button>
+                                        <button onclick="selectSkill('tools')" id="pill-tools" class="skill-pill px-4 py-2.5 rounded-xl font-display font-bold text-xs sm:text-sm flex items-center gap-2 bg-white dark:bg-slate-800 text-ink dark:text-white border-2 border-ink dark:border-slate-600 hover:bg-butter transition-all hover:scale-105">
+                                            <i data-lucide="laptop" class="w-4 h-4 text-pink-500"></i>
+                                            <span>Marketing &amp; Business Toolkit</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="rounded-2xl bg-stone-50 dark:bg-slate-800 border-2 border-ink dark:border-slate-600 shadow-sticker overflow-hidden">
+                                    <div class="metric-card-header">
+                                        <span>ACTIVE PILLAR SPECIFICATION</span>
+                                        <span id="skill-level" class="text-butter">OMNI-CHANNEL GROWTH</span>
+                                    </div>
+                                    <div class="p-6 space-y-3">
+                                        <h4 id="skill-title" class="font-display font-extrabold text-lg sm:text-xl text-ink dark:text-white">
+                                            Full-Funnel Campaign Architecture &amp; Paid Acquisition
+                                        </h4>
+                                        <p id="skill-desc" class="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
+                                            Designing high-conversion promotional campaigns that balance customer acquisition cost (CAC) with basket-size growth by combining targeted social ads, local SEO, and customer referral programs.
+                                        </p>
+                                        <div class="pt-1">
+                                            <div class="flex justify-between text-[10px] font-mono font-bold text-stone-500 mb-1">
+                                                <span>EXECUTION PROFICIENCY &amp; COMMERCIAL IMPACT</span>
+                                                <span class="text-pink-600 dark:text-pink-400">VERIFIED</span>
+                                            </div>
+                                            <div class="w-full h-3 rounded-full bg-stone-200 dark:bg-slate-700 border border-ink dark:border-slate-600 overflow-hidden p-0.5">
+                                                <div id="skill-bar" class="h-full rounded-full bg-gradient-to-r from-pink-500 to-rose-500 transition-all duration-500" style="width: 96%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="scroll-mt-24 space-y-14 min-h-[90vh] flex flex-col justify-center" data-aos="fade-up" data-aos-duration="1000">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b-2 border-ink dark:border-slate-700 pb-4">
+                <div>
+                    <span class="font-mono text-xs font-bold uppercase tracking-widest text-pink-600 dark:text-pink-400 block">SLIDE 03 // VERIFIED COMMERCIAL CASE STUDIES</span>
+                    <div class="flex flex-wrap items-baseline gap-3 mt-1">
+                        <span class="font-serifItalic italic text-4xl sm:text-5xl text-pink-600 dark:text-pink-400">Featured</span>
+                        <h2 class="bubble-pink-text text-5xl sm:text-6xl">CAMPAIGNS &amp; WORKS</h2>
+                    </div>
+                </div>
+                <span class="px-4 py-2 rounded-xl bg-ink text-white dark:bg-slate-800 font-mono text-xs font-bold shadow-pink-sticker">
+                    Click any case study or photo to inspect 🔍
+                </span>
+            </div>
+
+            <!-- Case Study 01: Phusit Nungchill Cafe -->
+            <div data-aos="zoom-in">
+                <div class="flex items-center">
+                    <div class="folder-tab bg-pink-400 text-ink">
+                        <span>+ CASE STUDY 01 // F&amp;B BRAND &amp; GROWTH</span>
+                    </div>
+                    <div class="folder-tab bg-stone-200 dark:bg-slate-800 text-stone-600 dark:text-stone-400 ml-2 hidden sm:inline-flex">
+                        <span>AUG – DEC 2024</span>
+                    </div>
+                </div>
+                <article id="cafe-case" class="editorial-card rounded-b-[28px] rounded-tr-[28px] p-6 sm:p-10 border-2 border-ink dark:border-slate-700 relative overflow-hidden space-y-8">
+                    <div class="flex flex-wrap items-center justify-between gap-3 border-b border-stone-200 dark:border-slate-800 pb-5">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="px-3 py-1 rounded-md text-xs font-mono font-bold bg-stone-900 text-white dark:bg-pink-500">
+                                CONSUMER R&amp;D • PRICING • LINE OA CRM
+                            </span>
+                            <span class="text-xs font-mono text-ink bg-butter px-3 py-1 rounded-md border border-ink font-bold">
+                                +86.4% Peak Net Sales Surge
+                            </span>
+                        </div>
+                        <button id="cafe-read-btn" onclick="inspectProject('cafe')" class="btn-cream-sticker px-4 py-2 rounded-xl font-display font-bold text-xs text-ink dark:text-white flex items-center gap-1.5 z-30">
+                            <span>Read Full Case Study</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-pink-600"></i>
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-7 space-y-4">
+                            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+                                <div onclick="openLightbox(0, 'cafe')" class="brand-logo-showcase shrink-0 cursor-pointer group" title="Click to zoom logo">
+                                    <img src="https://i.postimg.cc/13DtgwSY/IMG-3212.jpg" alt="Phusit Nungchill Cafe Logo" class="w-24 h-24 sm:w-28 sm:h-28 object-contain rounded-xl transition-transform duration-300 group-hover:scale-105" />
+                                </div>
+                                <div>
+                                    <span class="font-serifItalic italic text-2xl sm:text-3xl text-pink-600 dark:text-pink-400 block -mb-1">
+                                        Menu R&amp;D &amp; Commercial Growth
+                                    </span>
+                                    <h3 class="bubble-pink-text text-2xl sm:text-4xl text-ink dark:text-white leading-tight">
+                                        PHUSIT NUNGCHILL CAFE
+                                    </h3>
+                                    <p class="font-mono text-[11px] text-stone-500 dark:text-stone-400 mt-1 uppercase">
+                                        OPERATIONS &amp; MARKETING STRATEGY • 4.9★ GOOGLE RATING (3,057+ VIEWS)
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p class="text-stone-600 dark:text-stone-300 text-xs sm:text-sm leading-relaxed">
+                                Led <strong class="text-ink dark:text-white">signature menu R&amp;D, cost-backed promotional bundling, and proactive LINE OA &amp; Facebook marketing</strong>, achieving a <strong class="text-pink-600 dark:text-pink-400">+28.6% weekly sales surge (Aug '24)</strong>, an <strong class="text-pink-600 dark:text-pink-400">+86.4% net sales leap (Sep to Oct '24)</strong>, and sustained <strong class="text-pink-600 dark:text-pink-400">+33.1% growth (Nov '24)</strong>.
+                            </p>
+                        </div>
+
+                        <!-- Compact Tools Strip for Cafe with Inspection Modals -->
+                        <div class="lg:col-span-5 p-4 rounded-2xl bg-stone-50 dark:bg-slate-800 border-2 border-ink dark:border-slate-700 flex flex-wrap items-center gap-2.5">
+                            <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-ink dark:text-white w-full mb-0.5">
+                                PLATFORMS &amp; MARKETING TOOLS EXECUTED (CLICK TO INSPECT):
+                            </span>
+                            <span onclick="inspectCafeTool('LINE Official Account', 'LINE OA platform leveraged for custom Rich Menus, automated greeting messages, loyalty stamp cards, and proactive promotional broadcasts to boost customer repeat orders.', 'https://i.postimg.cc/g27DJ9zm/IMG-3192.png')" class="tool-badge-pill" title="Click to inspect LINE OA"><img src="https://i.postimg.cc/g27DJ9zm/IMG-3192.png" alt="LINE OA" class="h-6 w-auto max-w-[68px] object-contain" /></span>
+                            <span onclick="inspectCafeTool('Facebook Page & Ads', 'Facebook Page admin operations, inbox customer inquiry handling, and targeted ad campaigns driving local F&B discovery and engagement.', 'https://i.postimg.cc/K8WNzXGz/IMG-3193.png')" class="tool-badge-pill" title="Click to inspect Facebook"><img src="https://i.postimg.cc/K8WNzXGz/IMG-3193.png" alt="Facebook" class="h-6 w-auto max-w-[68px] object-contain" /></span>
+                            <span onclick="inspectCafeTool('Google Business Profile', 'Google Business Profile local SEO optimization yielding a 4.9-star rating across 3,057+ views and customer map discovery.', 'https://i.postimg.cc/9QkpM3mf/IMG-3194.jpg')" class="tool-badge-pill" title="Click to inspect Google"><img src="https://i.postimg.cc/9QkpM3mf/IMG-3194.jpg" alt="Google" class="h-6 w-auto max-w-[68px] object-contain rounded-sm" /></span>
+                            <span onclick="inspectCafeTool('Canva Studio', 'Canva graphic design suite utilized for professional promotional flyers, menu layouts, social media banners, and campaign ads.', 'https://i.postimg.cc/W4J7q9zN/IMG-3195.jpg')" class="tool-badge-pill" title="Click to inspect Canva"><img src="https://i.postimg.cc/W4J7q9zN/IMG-3195.jpg" alt="Canva" class="h-6 w-auto max-w-[68px] object-contain rounded-sm" /></span>
+                            <span onclick="inspectCafeTool('Meta Business Suite', 'Meta Business Suite for scheduling ad campaigns, monitoring engagement analytics, and managing community messaging.', 'https://i.postimg.cc/Dzbc4C0c/IMG-3199.png')" class="tool-badge-pill" title="Click to inspect Meta"><img src="https://i.postimg.cc/Dzbc4C0c/IMG-3199.png" alt="Meta" class="h-6 w-auto max-w-[68px] object-contain rounded-sm" /></span>
+                            <span onclick="inspectCafeTool('Google Ads', 'Google Ads strategy to capture high-intent local search traffic and increase foot traffic.', 'https://i.postimg.cc/SKzGYZRY/IMG-3200.jpg')" class="tool-badge-pill" title="Click to inspect Google Ads"><img src="https://i.postimg.cc/SKzGYZRY/IMG-3200.jpg" alt="Google Ads" class="h-6 w-auto max-w-[68px] object-contain rounded-sm" /></span>
+                            <span onclick="inspectCafeTool('TikTok Creator Studio', 'TikTok video content creation showcasing signature menu items and viral cafe vibes.', 'https://i.postimg.cc/W3NjppMZ/IMG-3219.jpg')" class="tool-badge-pill" title="Click to inspect TikTok"><img src="https://i.postimg.cc/W3NjppMZ/IMG-3219.jpg" alt="TikTok" class="h-6 w-auto max-w-[68px] object-contain rounded-sm" /></span>
+                            <span onclick="inspectCafeTool('Loyverse POS', 'Loyverse Point of Sale (POS) mobile and tablet cashier system used for daily transactions, item inventory management, and fast customer checkout.', 'https://i.postimg.cc/gkqLcsLg/IMG-3235.webp')" class="tool-badge-pill" title="Click to inspect Loyverse POS"><img src="https://i.postimg.cc/gkqLcsLg/IMG-3235.webp" alt="Loyverse POS" class="h-6 w-auto max-w-[68px] object-contain rounded-sm" /></span>
+                            <span onclick="inspectCafeTool('Loyverse Dashboard', 'Loyverse Dashboard back-office analytics suite utilized to monitor real-time sales reports, ticket sizes, item popularity, and hourly revenue peaks.', 'https://i.postimg.cc/FsgkFpkC/IMG-3236.png')" class="tool-badge-pill" title="Click to inspect Loyverse Dashboard"><img src="https://i.postimg.cc/FsgkFpkC/IMG-3236.png" alt="Loyverse Dashboard" class="h-6 w-auto max-w-[68px] object-contain rounded-sm" /></span>
+                        </div>
+                    </div>
+
+                    <!-- Challenge & Strategy Bar -->
+                    <div class="p-4 rounded-2xl bg-blush/50 dark:bg-slate-800/60 border border-stone-300 dark:border-slate-700 grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
+                        <div class="lg:col-span-5 space-y-1">
+                            <span class="font-mono text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-ink text-white inline-block">THE CHALLENGE &amp; STRATEGY</span>
+                            <p class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed pt-0.5">
+                                Focused on increasing average basket size and repeat orders while maintaining strict food-cost margins by developing signature Oregano Pies, calorie-counted menus, and "Check-in for Free Pie" promotions.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-2">
+                            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-ink dark:border-slate-600 text-center shadow-sm">
+                                <i data-lucide="utensils" class="w-4 h-4 mx-auto text-pink-600 mb-1"></i>
+                                <span class="font-mono text-[9px] font-bold block text-ink dark:text-white">01. MENU R&amp;D</span>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-ink dark:border-slate-600 text-center shadow-sm">
+                                <i data-lucide="calculator" class="w-4 h-4 mx-auto text-pink-600 mb-1"></i>
+                                <span class="font-mono text-[9px] font-bold block text-ink dark:text-white">02. ".9" PRICING</span>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-ink dark:border-slate-600 text-center shadow-sm">
+                                <i data-lucide="message-circle" class="w-4 h-4 mx-auto text-pink-600 mb-1"></i>
+                                <span class="font-mono text-[9px] font-bold block text-ink dark:text-white">03. LINE OA CRM</span>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-ink dark:border-slate-600 text-center shadow-sm">
+                                <i data-lucide="star" class="w-4 h-4 mx-auto text-pink-600 mb-1"></i>
+                                <span class="font-mono text-[9px] font-bold block text-ink dark:text-white">04. REVIEW LOOP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="cafe-sales-charts-container" class="rounded-2xl border-2 border-ink dark:border-slate-700 overflow-hidden bg-stone-50 dark:bg-slate-800/90 shadow-sticker">
+                        <div class="metric-card-header">
+                            <span>● VERIFIED CAFE SALES &amp; METRICS CHARTS (AUG – NOV 2024)</span>
+                            <span class="text-butter">Click any chart to zoom full-screen 🔍</span>
+                        </div>
+                        <div class="p-5 space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div onclick="openLightbox(0, 'cafe')" class="rounded-xl overflow-hidden border-2 border-ink dark:border-slate-700 bg-white cursor-pointer shadow-sm hover:scale-[1.01] transition-transform">
+                                    <img src="https://i.postimg.cc/25tZpJpG/IMG-2491.jpg" alt="Phusit Cafe Sales Chart 1" class="w-full h-auto object-contain" />
+                                </div>
+                                <div onclick="openLightbox(1, 'cafe')" class="rounded-xl overflow-hidden border-2 border-ink dark:border-slate-700 bg-white cursor-pointer shadow-sm hover:scale-[1.01] transition-transform">
+                                    <img src="https://i.postimg.cc/jj17V9Vv/IMG-2493.jpg" alt="Phusit Cafe Sales Chart 2" class="w-full h-auto object-contain" />
+                                </div>
+                                <div onclick="openLightbox(2, 'cafe')" class="rounded-xl overflow-hidden border-2 border-ink dark:border-slate-700 bg-white cursor-pointer shadow-sm hover:scale-[1.01] transition-transform">
+                                    <img src="https://i.postimg.cc/HxhRDRqF/IMG-2671.jpg" alt="Phusit Cafe Sales Chart 3" class="w-full h-auto object-contain" />
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+                                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border-2 border-ink dark:border-slate-700 text-center space-y-1 shadow-sm">
+                                    <span class="text-[10px] font-mono text-pink-600 dark:text-pink-400 font-bold block uppercase">September – October 2024</span>
+                                    <span class="text-[11px] font-mono text-stone-600 dark:text-stone-300 block">Weekly Net Sales: <strong class="text-pink-600">+86.4% Leap</strong></span>
+                                    <span class="text-[11px] font-mono text-stone-600 dark:text-stone-300 block">Avg Ticket Size: <strong class="text-ink dark:text-white">฿72.40 (+0.08%)</strong></span>
+                                    <span class="text-[11px] font-mono text-stone-600 dark:text-stone-300 block">Order Volume: <strong class="text-lime-700 dark:text-lime-400">216 Receipts</strong></span>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border-2 border-ink dark:border-slate-700 text-center space-y-1 shadow-sm">
+                                    <span class="text-[10px] font-mono text-pink-600 dark:text-pink-400 font-bold block uppercase">November 2024</span>
+                                    <span class="text-[11px] font-mono text-stone-600 dark:text-stone-300 block">Weekly Net Sales: <strong class="text-pink-600">+33.1% Growth</strong></span>
+                                    <span class="text-[11px] font-mono text-stone-600 dark:text-stone-300 block">Avg Ticket Size: <strong class="text-ink dark:text-white">฿83.22 (+13.7%)</strong></span>
+                                    <span class="text-[11px] font-mono text-stone-600 dark:text-stone-300 block">Order Volume: <strong class="text-lime-700 dark:text-lime-400">137 Receipts</strong></span>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border-2 border-ink dark:border-slate-700 text-center space-y-1 shadow-sm">
+                                    <span class="text-[10px] font-mono text-pink-600 dark:text-pink-400 font-bold block uppercase">August 2024</span>
+                                    <span class="text-[11px] font-mono text-stone-600 dark:text-stone-300 block">Weekly Net Sales: <strong class="text-pink-600">+28.6% (฿13,765)</strong></span>
+                                    <span class="text-[11px] font-mono text-stone-600 dark:text-stone-300 block">Avg Ticket Size: <strong class="text-ink dark:text-white">฿88.81 (+18.7%)</strong></span>
+                                    <span class="text-[11px] font-mono text-stone-600 dark:text-stone-300 block">Order Volume: <strong class="text-lime-700 dark:text-lime-400">155 Orders (+8.4%)</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-center justify-between">
+                            <p class="text-xs font-mono text-ink dark:text-white uppercase font-bold">📁 CAFE R&amp;D, MENU &amp; PROMO GALLERY (CLICK TO ZOOM):</p>
+                            <div class="flex items-center gap-3">
+                                <button onclick="openGalleryModal('cafe')" class="btn-pink-glossy px-3.5 py-1.5 rounded-lg font-mono text-[11px] font-bold">
+                                    View All Photos (45) ↗
+                                </button>
+                                <span class="text-[11px] font-mono text-pink-600 dark:text-pink-400 font-bold">45 Assets</span>
+                            </div>
+                        </div>
+
+                        <div id="cafe-preview-grid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-2.5 max-h-[380px] overflow-y-auto pr-1">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Case Study 02: Real Estate by PP Group -->
+            <div data-aos="zoom-in">
+                <div class="flex items-center">
+                    <div class="folder-tab bg-butter text-ink">
+                        <span>+ CASE STUDY 02 // REAL ESTATE PROMOTIONS &amp; ROI</span>
+                    </div>
+                    <div class="folder-tab bg-stone-200 dark:bg-slate-800 text-stone-600 dark:text-stone-400 ml-2 hidden sm:inline-flex">
+                        <span>DEC 2024 – APR 2025</span>
+                    </div>
+                </div>
+                <article id="realestate-case" class="editorial-card rounded-b-[28px] rounded-tr-[28px] p-6 sm:p-10 border-2 border-ink dark:border-slate-700 relative overflow-hidden space-y-8">
+                    <div class="flex flex-wrap items-center justify-between gap-3 border-b border-stone-200 dark:border-slate-800 pb-5">
+                        <div class="flex items-center gap-2">
+                            <span class="px-3 py-1 rounded-md text-xs font-mono font-bold bg-stone-900 dark:bg-slate-800 text-white">
+                                PROPERTY MARKETING • AIRBNB SUPERHOST
+                            </span>
+                            <span class="text-xs font-mono text-ink bg-pink-200 px-3 py-1 rounded-md border border-ink font-bold">10-Asset Portfolio • 4.8–5.0★</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <button onclick="openGalleryModal('realestate')" class="btn-pink-glossy px-3.5 py-1.5 rounded-lg font-mono text-[11px] font-bold">
+                                View All Photos (9) ↗
+                            </button>
+                            <button id="realestate-read-btn" onclick="inspectProject('realestate')" class="btn-cream-sticker px-4 py-2 rounded-xl font-display font-bold text-xs text-ink dark:text-white flex items-center gap-1.5 z-30">
+                                <span>Read Full Case Study</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 text-pink-600"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-7 space-y-3">
+                            <span class="font-serifItalic italic text-2xl sm:text-3xl text-pink-600 dark:text-pink-400 block -mb-1">
+                                Dynamic Yield &amp; Paid Social
+                            </span>
+                            <h3 class="bubble-pink-text text-3xl sm:text-5xl text-ink dark:text-white leading-none">
+                                REAL ESTATE BY PP GROUP
+                            </h3>
+                            <p class="text-stone-600 dark:text-stone-300 text-xs sm:text-sm leading-relaxed pt-1">
+                                Managed <strong class="text-ink dark:text-white">on-site property feasibility, targeted Facebook Ads, and seasonal dynamic pricing</strong> across a 10-property portfolio, earning <strong class="text-pink-600 dark:text-pink-400">Airbnb Superhost status</strong> with consistent year-round occupancy and a <strong class="text-ink dark:text-white">4.8 to 5.0 star guest rating</strong>.
+                            </p>
+                        </div>
+
+                        <!-- Real Estate Platform Executed Strip with exact links -->
+                        <div class="lg:col-span-5 p-4 rounded-2xl bg-stone-50 dark:bg-slate-800 border-2 border-ink dark:border-slate-700 flex flex-wrap items-center gap-2.5">
+                            <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-ink dark:text-white w-full mb-0.5">
+                                PROPERTY LISTING &amp; AD PLATFORMS EXECUTED (CLICK TO INSPECT):
+                            </span>
+                            <span onclick="inspectRealEstateTool('Facebook Ads', 'Facebook Ads Manager used to target potential home buyers and tourists with high-converting property walkthroughs and ad campaigns.', 'https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg')" class="tool-badge-pill" title="Click to inspect Facebook Ads"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook Ads" class="h-6 w-6 object-contain" /></span>
+                            <span onclick="inspectRealEstateTool('Airbnb', 'Airbnb hosting platform dashboard for managing guest messaging, dynamic pricing, and maintaining Superhost status across 10 properties.', 'https://i.postimg.cc/sg3QMNkh/IMG-3202.png')" class="tool-badge-pill" title="Click to inspect Airbnb"><img src="https://i.postimg.cc/sg3QMNkh/IMG-3202.png" alt="Airbnb" class="h-6 w-auto max-w-[68px] object-contain rounded-sm" /></span>
+                            <span onclick="inspectRealEstateTool('Meta Business Suite', 'Meta Business Suite for managing multi-channel ad placements, audience targeting analytics, and direct messaging enquiries.', 'https://i.postimg.cc/Dzbc4C0c/IMG-3199.png')" class="tool-badge-pill" title="Click to inspect Meta Business Suite"><img src="https://i.postimg.cc/Dzbc4C0c/IMG-3199.png" alt="Meta Business Suite" class="h-6 w-auto max-w-[68px] object-contain rounded-sm" /></span>
+                            <span onclick="inspectRealEstateTool('Facebook Marketplace', 'Facebook Marketplace listings optimized for local buyers and renters searching for prime residential condos.', 'https://i.postimg.cc/BnJLjVrH/IMG-3204.jpg')" class="tool-badge-pill" title="Click to inspect Facebook Marketplace"><img src="https://i.postimg.cc/BnJLjVrH/IMG-3204.jpg" alt="Facebook Marketplace" class="h-6 w-auto max-w-[68px] object-contain rounded-sm" /></span>
+                            <span onclick="inspectRealEstateTool('Google Ads', 'Google Ads performance campaigns targeting high-intent property investors and vacationers searching for Pattaya rentals.', 'https://i.postimg.cc/SKzGYZRY/IMG-3200.jpg')" class="tool-badge-pill" title="Click to inspect Google Ads"><img src="https://i.postimg.cc/SKzGYZRY/IMG-3200.jpg" alt="Google Ads" class="h-6 w-auto max-w-[68px] object-contain rounded-sm" /></span>
+                            <span onclick="inspectRealEstateTool('DDproperty by Guruproperty', 'DDproperty platform used to list and syndicate prime residential listings for maximum buyer reach and lead generation.', 'https://i.postimg.cc/RZv6WDkt/IMG-3206.png')" class="tool-badge-pill" title="Click to inspect DDproperty"><img src="https://i.postimg.cc/RZv6WDkt/IMG-3206.png" alt="DDproperty" class="h-6 w-auto max-w-[68px] object-contain rounded-sm" /></span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <p class="text-xs font-mono text-ink dark:text-white uppercase font-bold">📁 PROPERTY GALLERY &amp; REVIEWS:</p>
+                            <button onclick="openGalleryModal('realestate')" class="btn-pink-glossy px-3.5 py-1.5 rounded-lg font-mono text-[11px] font-bold">
+                                View All Photos (9) ↗
+                            </button>
+                        </div>
+                        <div id="realestate-preview-grid" class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-5 gap-2.5 max-h-[260px] overflow-y-auto pr-1">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Case Study 03: Phusit Insurance Broker -->
+            <div data-aos="zoom-in">
+                <div class="flex items-center">
+                    <div class="folder-tab bg-skyFolder text-ink">
+                        <span>+ CASE STUDY 03 // CORPORATE ACCOUNTING &amp; B2B TAX</span>
+                    </div>
+                    <div class="folder-tab bg-stone-200 dark:bg-slate-800 text-stone-600 dark:text-stone-400 ml-2 hidden sm:inline-flex">
+                        <span>AUG 2021 – AUG 2024</span>
+                    </div>
+                </div>
+                <article id="insurance-case" class="editorial-card rounded-b-[28px] rounded-tr-[28px] p-6 sm:p-10 border-2 border-ink dark:border-slate-700 relative overflow-hidden space-y-8">
+                    <div class="flex flex-wrap items-center justify-between gap-3 border-b border-stone-200 dark:border-slate-800 pb-5">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="px-3 py-1 rounded-md text-xs font-mono font-bold bg-stone-900 text-white">
+                                FULL-CYCLE BOOKKEEPING • CIT &amp; VAT
+                            </span>
+                            <span class="text-xs font-mono text-ink bg-mintFolder px-3 py-1 rounded-md border border-ink font-bold">
+                                33 Global &amp; National Partners • 50+ Tax Filings
+                            </span>
+                        </div>
+                        <button id="insurance-read-btn" onclick="inspectProject('insurance')" class="btn-cream-sticker px-4 py-2 rounded-xl font-display font-bold text-xs text-ink dark:text-white flex items-center gap-1.5 z-30">
+                            <span>Read Full Case Study</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-pink-600"></i>
+                        </button>
+                    </div>
+
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-5">
+                            <div onclick="openLightbox(0, 'insurance')" class="brand-logo-showcase shrink-0 cursor-pointer group" title="Click to zoom logo">
+                                <img src="https://i.postimg.cc/zvnzL1ZQ/IMG-3198.jpg" alt="Phusit Insurance Logo" class="w-24 h-24 sm:w-28 sm:h-28 object-contain rounded-xl transition-transform duration-300 group-hover:scale-105" />
+                            </div>
+                            <div>
+                                <span class="font-serifItalic italic text-2xl sm:text-3xl text-pink-600 dark:text-pink-400 block -mb-1">
+                                    Corporate Tax Compliance &amp; B2B Reconciliation
+                                </span>
+                                <h3 class="bubble-pink-text text-3xl sm:text-5xl text-ink dark:text-white leading-none">
+                                    PHUSIT INSURANCE BROKER
+                                </h3>
+                            </div>
+                        </div>
+                        <p class="text-stone-600 dark:text-stone-300 text-xs sm:text-sm leading-relaxed mt-3">
+                            Executed <strong class="text-ink dark:text-white">full-cycle accounting</strong>, prepared <strong class="text-pink-600 dark:text-pink-400">50+ corporate tax returns (CIT &amp; VAT)</strong> with 100% regulatory compliance, and reconciled multi-million premium accounts across a network of <strong class="text-ink dark:text-white">33 global and domestic insurance leaders</strong>.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs">
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-stone-50 dark:bg-slate-800 border-2 border-ink dark:border-slate-700">
+                            <span class="text-stone-500 dark:text-stone-400">B2B INSURER NETWORK</span>
+                            <span class="text-pink-600 dark:text-pink-400 font-bold">33 PARTNERS</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-stone-50 dark:bg-slate-800 border-2 border-ink dark:border-slate-700">
+                            <span class="text-stone-500 dark:text-stone-400">STATUTORY TAX FILINGS</span>
+                            <span class="text-ink dark:text-white font-bold">50+ CIT &amp; VAT</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-stone-50 dark:bg-slate-800 border-2 border-ink dark:border-slate-700">
+                            <span class="text-stone-500 dark:text-stone-400">AUDIT &amp; COMPLIANCE</span>
+                            <span class="text-lime-700 dark:text-lime-400 font-bold">100% ACCURACY</span>
+                        </div>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-stone-50/95 dark:bg-slate-800/90 border-2 border-ink dark:border-slate-700 space-y-4">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <p class="text-xs font-mono text-ink dark:text-white uppercase font-bold">
+                                🏢 B2B INSURANCE &amp; FINANCIAL PARTNERS RECONCILED (33 MULTINATIONAL &amp; NATIONAL LEADERS):
+                            </p>
+                            <span class="text-[11px] font-mono text-pink-600 dark:text-pink-400 font-bold">Hover to pause • Click any card to inspect audit details 🔍</span>
+                        </div>
+
+                        <div class="space-y-2">
+                            <span class="font-mono text-[10px] font-bold uppercase tracking-wider text-pink-600 dark:text-pink-400 block px-1">1. Multinational Insurers (Global Partners)</span>
+                            <div class="marquee-container py-1">
+                                <div id="insurance-marquee-multinational" class="marquee-track-left gap-3 items-center">
+                                    <!-- Populated dynamically -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2 pt-2">
+                            <span class="font-mono text-[10px] font-bold uppercase tracking-wider text-pink-600 dark:text-pink-400 block px-1">2. National Providers &amp; Domestic Insurers (Local Partners)</span>
+                            <div class="marquee-container py-1">
+                                <div id="insurance-marquee-national" class="marquee-track-right gap-3 items-center">
+                                    <!-- Populated dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="leadership-section" class="scroll-mt-24 space-y-12 min-h-[90vh] flex flex-col justify-center" data-aos="fade-up" data-aos-duration="1000">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b-2 border-ink dark:border-slate-700 pb-4">
+                <div>
+                    <span class="font-mono text-xs font-bold uppercase tracking-widest text-pink-600 dark:text-pink-400 block">SLIDE 04 // EXECUTIVE LEADERSHIP &amp; PUBLIC RELATIONS</span>
+                    <div class="flex flex-wrap items-baseline gap-3 mt-1">
+                        <span class="font-serifItalic italic text-4xl sm:text-5xl text-pink-600 dark:text-pink-400">Global</span>
+                        <h2 class="bubble-pink-text text-5xl sm:text-6xl">LEADERSHIP &amp; PR</h2>
+                    </div>
+                </div>
+                <span class="px-4 py-2 rounded-xl bg-ink text-white dark:bg-slate-800 font-mono text-xs font-bold shadow-pink-sticker">
+                    CU Student Union (UK) • Rotary RYE &amp; RYLA
+                </span>
+            </div>
+
+            <div data-aos="zoom-in">
+                <div class="flex items-center">
+                    <div class="folder-tab bg-mintFolder text-ink">
+                        <span>+ CASE STUDY 04 // CROSS-CULTURAL PR &amp; EVENT BUDGETING</span>
+                    </div>
+                </div>
+                <article id="leadership-case" class="editorial-card rounded-b-[28px] rounded-tr-[28px] p-6 sm:p-10 border-2 border-ink dark:border-slate-700 relative overflow-hidden space-y-8">
+                    <div class="flex flex-wrap items-center justify-between gap-3 border-b border-stone-200 dark:border-slate-800 pb-5">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="px-3 py-1 rounded-md text-xs font-mono font-bold bg-stone-900 text-white">
+                                CU STUDENT UNION • ROTARY &amp; RYLA
+                            </span>
+                            <span class="text-xs font-mono text-ink bg-butter px-3 py-1 rounded-md border border-ink font-bold">
+                                Project Lead &amp; Treasurer
+                            </span>
+                        </div>
+                        <button id="leadership-read-btn" onclick="inspectProject('events')" class="btn-cream-sticker px-4 py-2 rounded-xl font-display font-bold text-xs text-ink dark:text-white flex items-center gap-1.5 z-30">
+                            <span>Read Leadership Case Study</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-pink-600"></i>
+                        </button>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex flex-wrap items-center gap-6 py-3">
+                            <div class="px-8 py-5 rounded-3xl bg-white dark:bg-slate-800 border-2 border-ink dark:border-pink-400 shadow-sticker flex items-center justify-center transition-transform hover:scale-105">
+                                <img src="https://i.postimg.cc/NF4hqGvp/IMG-3209.png" alt="Org 1" style="height: 84px; width: auto; object-contain;" />
+                            </div>
+                            <div class="px-8 py-5 rounded-3xl bg-white dark:bg-slate-800 border-2 border-ink dark:border-pink-400 shadow-sticker flex items-center justify-center transition-transform hover:scale-105">
+                                <img src="https://i.postimg.cc/KjNXSchV/IMG-3210.png" alt="Org 2" style="height: 84px; width: auto; object-contain;" />
+                            </div>
+                            <div class="px-8 py-5 rounded-3xl bg-white dark:bg-slate-800 border-2 border-ink dark:border-pink-400 shadow-sticker flex items-center justify-center transition-transform hover:scale-105">
+                                <img src="https://i.postimg.cc/T198M2vF/IMG-3211.png" alt="Org 3" style="height: 84px; width: auto; object-contain;" />
+                            </div>
+                        </div>
+                        <h3 class="bubble-pink-text text-3xl sm:text-5xl text-ink dark:text-white leading-none">
+                            STUDENT UNION (UK) &amp; ROTARY YOUTH LEADERSHIP (RYLA)
+                        </h3>
+                        <p class="text-stone-600 dark:text-stone-300 text-xs sm:text-sm leading-relaxed mt-2">
+                            Directed cross-functional student teams to plan, promote, and execute cultural events (Aug–Dec 2025) and managed full club budgeting (Jan–Jun 2026) at <strong class="text-ink dark:text-white">Coventry University Student Union</strong>, alongside serving as <strong class="text-ink dark:text-white">Rotary Youth Exchange (RYE) Cultural Mediator &amp; PR Advisor</strong> for 8 international exchange students.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                        <div class="lg:col-span-5 rounded-2xl bg-stone-50 dark:bg-slate-800/90 border-2 border-ink dark:border-slate-700 overflow-hidden shadow-sticker">
+                            <div class="metric-card-header">
+                               <span>KEY LEADERSHIP &amp; PR IMPACT</span>
+                                <span class="text-butter">UK • TH</span>
+                            </div>
+                            <div class="p-4 space-y-2.5">
+                                <ul class="text-xs text-stone-700 dark:text-stone-300 space-y-2 list-disc list-inside leading-relaxed">
+                                    <li><strong class="text-ink dark:text-white">CU Student Union (UK):</strong> Project Lead &amp; Treasurer. Directed promotional campaigns, student committees, and full club budgets.</li>
+                                    <li><strong class="text-ink dark:text-white">Rotary Exchange (RYE) Advisor &amp; Mediator:</strong> Organized cultural bonding activities and acted as the bilingual coordinator between 8 exchange students and host families.</li>
+                                    <li><strong class="text-ink dark:text-white">RYLA Delegate:</strong> Selected by the executive board to represent the club and support international leadership workshops.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-7 space-y-3">
+                            <div class="flex items-center justify-between">
+                                <p class="text-xs font-mono text-ink dark:text-white uppercase font-bold">📁 LEADERSHIP &amp; EVENT PHOTO GALLERY:</p>
+                                <button onclick="openGalleryModal('leadership')" class="btn-pink-glossy px-3.5 py-1.5 rounded-lg font-mono text-[11px] font-bold">
+                                    View All Photos (27) ↗
+                                </button>
+                            </div>
+                            <div id="leadership-preview-grid" class="grid grid-cols-4 sm:grid-cols-9 md:grid-cols-9 gap-2 max-h-[220px] overflow-y-auto pr-1">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="scroll-mt-24 py-8" data-aos="fade-up" data-aos-duration="1000">
+            <div class="editorial-card rounded-[28px] overflow-hidden border-2 border-ink dark:border-slate-700 shadow-window">
+                <div class="browser-bar">
+                    <div class="flex items-center gap-2">
+                        <span class="px-2.5 py-0.5 rounded bg-ink text-white dark:bg-pink-500 font-mono text-[10px] font-bold">SLIDE 05</span>
+                        <span class="font-mono text-xs font-bold uppercase text-ink dark:text-white">// LET'S CONNECT &amp; COLLABORATE</span>
+                    </div>
+                    <span class="font-mono text-[11px] font-bold text-emerald-700 dark:text-emerald-400">● AVAILABLE FOR INTERNSHIPS &amp; PROJECTS</span>
+                </div>
+
+                <div class="p-6 sm:p-10 lg:p-12 bg-white/95 dark:bg-slate-900/95">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-8 space-y-5">
+                            <span class="font-serifItalic italic text-3xl sm:text-5xl text-pink-600 dark:text-pink-400 block -mb-2">
+                                Ready to Drive Growth?
+                            </span>
+                            <h2 class="bubble-pink-text text-4xl sm:text-6xl text-ink dark:text-white leading-none">
+                                LET'S WORK TOGETHER!
+                            </h2>
+                            <p class="text-sm sm:text-base text-stone-600 dark:text-stone-300 leading-relaxed max-w-2xl">
+                                Whether you are looking for a <strong class="text-ink dark:text-white">Marketing &amp; Brand Strategy</strong> team member, a <strong class="text-ink dark:text-white">Commercial Growth Analyst</strong>, or a creative mind backed by a <strong class="text-ink dark:text-white">First-Class Honours (UK) Accounting background</strong>, feel free to reach out directly via WhatsApp, LinkedIn, or Email below!
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+                                <a href="https://wa.me/6592417112" target="_blank" rel="noopener noreferrer" class="btn-cream-sticker p-4 rounded-2xl flex items-center justify-between group hover:bg-emerald-50 dark:hover:bg-slate-800">
+                                    <div class="flex items-center gap-3.5">
+                                        <div class="w-12 h-12 rounded-xl bg-white border-2 border-ink flex items-center justify-center p-2 shadow-sm group-hover:scale-110 transition-transform">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-full h-full object-contain" />
+                                        </div>
+                                        <div class="text-left">
+                                            <span class="font-mono text-[10px] font-bold uppercase text-emerald-700 dark:text-emerald-400 block">WHATSAPP DIRECT</span>
+                                            <span class="font-display font-extrabold text-sm text-ink dark:text-white">+65 9241 7112</span>
+                                        </div>
+                                    </div>
+                                    <i data-lucide="arrow-up-right" class="w-5 h-5 text-ink dark:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/chatchana-phoplap-902455348" target="_blank" rel="noopener noreferrer" class="btn-cream-sticker p-4 rounded-2xl flex items-center justify-between group hover:bg-blue-50 dark:hover:bg-slate-800">
+                                    <div class="flex items-center gap-3.5">
+                                        <div class="w-12 h-12 rounded-xl bg-white border-2 border-ink flex items-center justify-center p-2.5 shadow-sm group-hover:scale-110 transition-transform">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="w-full h-full object-contain" />
+                                        </div>
+                                        <div class="text-left">
+                                            <span class="font-mono text-[10px] font-bold uppercase text-blue-700 dark:text-blue-400 block">LINKEDIN PROFILE</span>
+                                            <span class="font-display font-extrabold text-sm text-ink dark:text-white">Chatchana Phoplap</span>
+                                        </div>
+                                    </div>
+                                    <i data-lucide="arrow-up-right" class="w-5 h-5 text-ink dark:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                                </a>
+
+                                <button onclick="handleEmailClick(event)" class="btn-cream-sticker p-4 rounded-2xl flex items-center justify-between group hover:bg-pink-50 dark:hover:bg-slate-800 text-left">
+                                    <div class="flex items-center gap-3 min-w-0 flex-1 pr-1">
+                                        <div class="w-11 h-11 rounded-xl bg-white border-2 border-ink flex items-center justify-center p-2 shadow-sm group-hover:scale-110 transition-transform shrink-0">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" class="w-full h-full object-contain" />
+                                        </div>
+                                        <div class="text-left min-w-0 flex-1">
+                                            <span class="font-mono text-[10px] font-bold uppercase text-pink-600 dark:text-pink-400 block">EMAIL ME</span>
+                                            <span class="font-display font-bold text-[11px] sm:text-xs text-ink dark:text-white block w-full leading-snug tracking-tight truncate">chatchanaphoplap@gmail.com</span>
+                                        </div>
+                                    </div>
+                                    <i data-lucide="arrow-up-right" class="w-4 h-4 text-ink dark:text-white shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                                </button>
+
+                                <button onclick="openCVModal()" class="btn-pink-glossy p-4 rounded-2xl flex items-center justify-between group text-left">
+                                    <div class="flex items-center gap-3.5">
+                                        <div class="w-12 h-12 rounded-xl bg-butter text-ink border-2 border-ink flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+                                            <i data-lucide="file-text" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <span class="font-mono text-[10px] font-bold uppercase text-pink-200 block">COMPLETE RESUME</span>
+                                            <span class="font-display font-extrabold text-sm text-white">Inspect / Print Full CV</span>
+                                        </div>
+                                    </div>
+                                    <i data-lucide="sparkles" class="w-5 h-5 text-butter"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Animated Hello Kitty Mascot (Transparent, Larger, Bouncing Winking & Kissing with Peace Sign matching user reference) -->
+                        <div class="lg:col-span-4 flex flex-col items-center justify-center text-center p-6 rounded-2xl bg-stone-50 dark:bg-slate-800 border-2 border-ink dark:border-slate-700 shadow-sticker relative">
+                            <div class="w-80 h-80 sm:w-96 sm:h-96 rounded-2xl flex flex-col items-center justify-center p-1 relative overflow-visible group animated-hello-cat">
+                                <svg viewBox="0 0 190 190" class="w-full h-full drop-shadow-xl overflow-visible">
+                                    <!-- Pink Bow on Left Ear -->
+                                    <g transform="translate(38, 14) rotate(-18)">
+                                        <ellipse cx="18" cy="14" rx="16" ry="11" fill="#ec4899" stroke="#141413" stroke-width="4"/>
+                                        <ellipse cx="48" cy="14" rx="16" ry="11" fill="#ec4899" stroke="#141413" stroke-width="4"/>
+                                        <circle cx="33" cy="14" r="7" fill="#fbcfe8" stroke="#141413" stroke-width="4"/>
+                                    </g>
+                                    <!-- Hello Kitty Head Base -->
+                                    <path d="M 54 56 Q 45 34 70 41 Q 88 28 106 41 Q 131 34 125 56 Q 143 70 138 95 Q 133 120 108 130 Q 83 140 59 130 Q 34 120 29 95 Q 24 70 54 56 Z" fill="#ffffff" stroke="#141413" stroke-width="4.5" stroke-linejoin="round"/>
+                                    <!-- Rosy Blush Cheek -->
+                                    <circle cx="47" cy="98" r="10" fill="#f472b6" opacity="0.75"/>
+                                    <!-- Winking Eye (Left) -->
+                                    <path d="M 57 80 Q 66 69 75 80" fill="none" stroke="#141413" stroke-width="4.5" stroke-linecap="round"/>
+                                    <!-- Normal Eye (Right) -->
+                                    <ellipse cx="101" cy="79" rx="5" ry="6.5" fill="#141413"/>
+                                    <circle cx="103" cy="77" r="2" fill="#ffffff"/>
+                                    <!-- Cute '3' Kissing Mouth -->
+                                    <path d="M 81 91 Q 89 84 94 91 Q 89 98 81 91 Z" fill="none" stroke="#141413" stroke-width="4" stroke-linejoin="round"/>
+                                    <!-- Whiskers -->
+                                    <line x1="34" y1="87" x2="16" y2="84" stroke="#141413" stroke-width="4" stroke-linecap="round"/>
+                                    <line x1="33" y1="98" x2="15" y2="101" stroke="#141413" stroke-width="4" stroke-linecap="round"/>
+                                    <line x1="117" y1="87" x2="135" y2="84" stroke="#141413" stroke-width="4" stroke-linecap="round"/>
+                                    <line x1="118" y1="98" x2="136" y2="101" stroke="#141413" stroke-width="4" stroke-linecap="round"/>
+                                    <!-- Peace Sign Paw Hand (V sign '✌️') -->
+                                    <g transform="translate(112, 94)">
+                                        <path d="M 15 36 Q 7 22 17 6 Q 21 15 21 21 Q 29 11 38 23 Q 28 40 15 36 Z" fill="#ffffff" stroke="#141413" stroke-width="4" stroke-linejoin="round"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="font-display font-extrabold text-base text-ink dark:text-white mt-2 tracking-tight">Thanks for visiting! 🐾✨</p>
+                            <p class="font-mono text-xs text-stone-500 dark:text-stone-400 mt-0.5">Ready for Internship &amp; Full-Time Roles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="relative z-10 border-t border-stone-300/80 dark:border-slate-800 py-8 px-4 text-center text-xs font-mono text-stone-500 no-print">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2026 CHATCHANA PHOPLAP (NEPJUNE) • MARKETING &amp; BRAND STRATEGY PORTFOLIO 🎀</p>
+            <p class="text-pink-600 dark:text-pink-400 font-semibold">LIGHT EDITORIAL &amp; BUBBLEGUM SCRAPBOOK EDITION • 📱 +65 9241 7112</p>
+        </div>
+    </footer>
+
+    <div id="modal-backdrop" class="fixed inset-0 z-50 bg-stone-900/40 backdrop-blur-[2px] hidden items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 rounded-[28px] max-w-4xl w-full p-6 sm:p-8 border-2 border-ink dark:border-slate-700 shadow-sticker relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-pink-100 dark:bg-slate-800 border border-ink dark:border-slate-600 text-ink dark:text-white hover:bg-pink-300 flex items-center justify-center">
+                <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+            <div id="modal-content" class="space-y-4"></div>
+        </div>
+    </div>
+
+    <div id="gallery-modal-backdrop" class="fixed inset-0 z-50 bg-stone-900/60 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 rounded-[28px] max-w-5xl w-full p-6 sm:p-8 border-2 border-ink dark:border-slate-700 shadow-sticker relative max-h-[90vh] overflow-y-auto space-y-4">
+            <div class="flex items-center justify-between pb-3 border-b border-stone-200 dark:border-slate-800">
+                <h3 id="gallery-modal-title" class="font-display font-extrabold text-xl text-ink dark:text-white">Full Gallery</h3>
+                <button onclick="closeGalleryModal()" class="w-9 h-9 rounded-full bg-pink-100 dark:bg-slate-800 border border-ink dark:border-slate-600 text-ink dark:text-white hover:bg-pink-300 flex items-center justify-center">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
+            <div id="gallery-modal-grid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3">
+                <!-- Populated dynamically -->
+            </div>
+            <div class="flex justify-end pt-2">
+                <button onclick="closeGalleryModal()" class="btn-cream-sticker px-5 py-2 rounded-full text-xs font-display font-bold">
+                    Close Gallery
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="tour-bubble-card" class="fixed z-[210] hidden w-[310px] sm:w-[350px] bg-white dark:bg-slate-900 rounded-2xl p-4 border-2 border-pink-500 shadow-pink-sticker transition-all duration-300">
+        <div class="flex items-center justify-between pb-2 mb-2 border-b border-stone-200 dark:border-slate-800">
+            <span class="font-mono text-[11px] uppercase tracking-wider text-pink-600 dark:text-pink-400 font-bold" id="tour-step-badge">Guide Walkthrough</span>
+            <button onclick="closeTour()" class="w-6 h-6 rounded-full bg-stone-100 dark:bg-slate-800 text-stone-500 hover:bg-pink-200 flex items-center justify-center text-xs">✕</button>
+        </div>
+        <h4 id="tour-title" class="font-display font-bold text-sm text-ink dark:text-white mb-1">Welcome! ✨</h4>
+        <p id="tour-desc" class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed mb-3">
+            Let's take a quick guided walkthrough on how to click and explore this portfolio!
+        </p>
+
+        <div id="tour-demo-container" class="hidden mb-3 p-3 rounded-xl bg-stone-900 text-white border border-pink-500 text-center shadow-md">
+            <div id="tour-demo-content" class="text-xs font-mono text-pink-300 font-bold">🌙 Dark Mode Preview Active...</div>
+        </div>
+
+        <div class="flex items-center justify-between">
+            <button id="tour-prev-btn" onclick="prevTourStep()" class="px-3 py-1.5 rounded-full text-[11px] font-mono border border-stone-300 dark:border-slate-700 hidden">Back</button>
+            <div class="ml-auto flex gap-2">
+                <button id="tour-skip-btn" onclick="closeTour()" class="px-3 py-1.5 rounded-full text-[11px] font-mono text-stone-500 hover:bg-stone-100">Skip</button>
+                <button id="tour-next-btn" onclick="nextTourStep()" class="btn-pink-glossy px-4 py-1.5 rounded-full font-display font-bold text-xs shadow-md pulse-tour">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox-backdrop" class="fixed inset-0 z-[190] bg-black/92 hidden flex-col items-center justify-between p-4 sm:p-6 overflow-hidden">
+        <div class="w-full max-w-5xl flex justify-between items-center pt-2 pb-2 z-20">
+            <span id="lightbox-counter" class="font-mono text-xs text-white/80 bg-white/10 px-3 py-1 rounded-full border border-white/20">1 / 50</span>
+            <div class="w-11"></div>
+        </div>
+
+        <div class="relative flex items-center justify-center w-full max-w-5xl my-auto">
+            <button onclick="navigateLightbox(-1)" class="absolute left-2 sm:left-4 z-30 w-12 h-12 rounded-full bg-white/20 text-white hover:bg-white/40 flex items-center justify-center border border-white/30 shadow-2xl transition-transform hover:scale-110">
+                <i data-lucide="chevron-left" class="w-7 h-7"></i>
+            </button>
+
+            <div class="flex flex-col items-center justify-center">
+                <img id="lightbox-img" src="" alt="Zoomed Preview" decoding="async" class="rounded-2xl border-2 border-white/20 shadow-2xl bg-white" />
+                <p id="lightbox-caption" class="mt-3 font-mono text-xs sm:text-sm text-white/95 bg-black/75 px-4 py-2 rounded-full border border-white/20 text-center max-w-[85vw]"></p>
+            </div>
+
+            <button onclick="navigateLightbox(1)" class="absolute right-2 sm:right-4 z-30 w-12 h-12 rounded-full bg-white/20 text-white hover:bg-white/40 flex items-center justify-center border border-white/30 shadow-2xl transition-transform hover:scale-110">
+                <i data-lucide="chevron-right" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <div class="w-full max-w-5xl flex justify-end items-center pb-3 pt-2 z-20">
+            <button onclick="closeLightbox()" class="px-6 py-2.5 rounded-full text-xs font-display font-bold shadow-lg flex items-center gap-2 bg-white text-ink hover:bg-stone-100 transition-colors">
+                <span>Close</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-white dark:bg-slate-900 px-5 py-3 rounded-full border-2 border-ink dark:border-slate-700 text-xs font-mono font-bold text-ink dark:text-white shadow-pink-sticker translate-y-24 opacity-0 transition-all duration-300 flex items-center gap-2 pointer-events-none">
+        <span class="text-base">💖</span>
+        <span id="toast-message">Copied to clipboard!</span>
+    </div>
+
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'cubic-bezier(0.16, 1, 0.3, 1)'
+        });
+
+        lucide.createIcons();
+
+        function handleEmailClick(e) {
+            e.preventDefault();
+            const email = "chatchanaphoplap@gmail.com";
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(email).catch(() => {});
+            }
+            showToast("Email copied to clipboard: " + email);
+            setTimeout(() => {
+                window.location.href = "mailto:" + email + "?subject=Inquiry%20Regarding%20Marketing%20Portfolio";
+            }, 300);
+        }
+
+        function toggleMobileMenu() {
+            const drawer = document.getElementById('mobile-menu-drawer');
+            if (drawer.classList.contains('hidden')) {
+                drawer.classList.remove('hidden');
+            } else {
+                drawer.classList.add('hidden');
+            }
+        }
+
+        function updateActiveNavOnScroll() {
+            const sectionIds = ['hero', 'skills', 'projects', 'leadership-section', 'contact'];
+            const navLinks = document.querySelectorAll('.nav-spy-link');
+            let currentSection = 'hero';
+            const triggerPoint = window.innerHeight * 0.38;
+
+            sectionIds.forEach(id => {
+                const sectionEl = document.getElementById(id);
+                if (sectionEl) {
+                    const rect = sectionEl.getBoundingClientRect();
+                    if (rect.top <= triggerPoint && rect.bottom >= triggerPoint / 2) {
+                        currentSection = id;
+                    }
+                }
+            });
+
+            navLinks.forEach(link => {
+                if (link.getAttribute('data-section') === currentSection) {
+                    link.classList.add('nav-link-active');
+                } else {
+                    link.classList.remove('nav-link-active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavOnScroll, { passive: true });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            updateActiveNavOnScroll();
+            checkAndStartTour();
+            renderPreviewGrids();
+        });
+
+        function toggleDarkMode() {
+            const htmlEl = document.documentElement;
+            const themeIcon = document.getElementById('theme-icon');
+            if (htmlEl.classList.contains('dark')) {
+                htmlEl.classList.remove('dark');
+                themeIcon.textContent = '🌙';
+                showToast('Switched to Light Editorial Zine Mode ☀️');
+            } else {
+                htmlEl.classList.add('dark');
+                themeIcon.textContent = '☀️';
+                showToast('Switched to Chic Dark Mode 🌙');
+            }
+        }
+
+        let currentTourStep = 1;
+        const tourSteps = [
+            {
+                title: "Welcome to Nepjune's Portfolio! ✨",
+                desc: "This quick walkthrough will show you how to navigate sections, switch themes, inspect Marketing Pillars, zoom into graphics, and view case studies.",
+                target: null,
+                position: "center",
+                demo: null,
+                blurType: "full"
+            },
+            {
+                title: "1. Top Navigation Menu & Mobile Drawer 🧭",
+                desc: "Click any pill button here or open the menu drawer to jump instantly to that section.",
+                target: "nav-menu-links",
+                position: "below",
+                demo: null,
+                blurType: "full"
+            },
+            {
+                title: "2. Dark / Light Mode Toggle 🌙☀️",
+                desc: "Click this moon/sun button anytime to switch between crisp light zine mode and chic dark mode.",
+                target: "theme-toggle-btn",
+                position: "below",
+                demo: "darklight-preview",
+                blurType: "full"
+            },
+            {
+                title: "3. Core Marketing Pillars 📊",
+                desc: "Click these interactive pillar buttons to inspect specific verified metrics and strategies like Promotional Campaigns and Market Research R&D!",
+                target: "marketing-pillars-container",
+                position: "above",
+                demo: null,
+                blurType: "none"
+            },
+            {
+                title: "4. Click Sales Charts & Photos to Zoom 📸",
+                desc: "Click directly on these sales charts in Case Study 01 to view them full-screen with left/right carousel arrows!",
+                target: "cafe-sales-charts-container",
+                position: "above",
+                demo: null,
+                blurType: "none"
+            },
+            {
+                title: "5. Read Full Case Study Button 📋",
+                desc: "Click this exact 'Read Full Case Study' button to inspect detailed commercial breakdown reports and metrics.",
+                target: "cafe-read-btn",
+                position: "above",
+                demo: null,
+                blurType: "none"
+            },
+            {
+                title: "6. View Complete CV 📄",
+                desc: "Click the 'Full CV' button anytime in the top-right corner to examine the complete academic and professional history popup!",
+                target: "full-cv-btn-el",
+                position: "below",
+                demo: true,
+                blurType: "nav-only"
+            }
+        ];
+
+        function checkAndStartTour() {
+            if (!sessionStorage.getItem('nepjune_tour_shown')) {
+                sessionStorage.setItem('nepjune_tour_shown', 'true');
+                startPortfolioTour();
+            }
+        }
+
+        function startPortfolioTour() {
+            currentTourStep = 1;
+            document.body.classList.add('tour-active');
+            updateTourBubble();
+        }
+
+        function nextTourStep() {
+            clearSpotlight();
+            currentTourStep++;
+            if (currentTourStep > tourSteps.length) {
+                closeTour();
+            } else {
+                updateTourBubble();
+            }
+        }
+
+        function prevTourStep() {
+            if (currentTourStep > 1) {
+                clearSpotlight();
+                currentTourStep--;
+                updateTourBubble();
+            }
+        }
+
+        function updateTourBubble() {
+            const step = tourSteps[currentTourStep - 1];
+            document.getElementById('tour-title').textContent = step.title;
+            document.getElementById('tour-desc').textContent = step.desc;
+
+            const backdropEl = document.getElementById('tour-spotlight-backdrop');
+            if (step.blurType === "full" || step.blurType === "nav-only") {
+                backdropEl.style.display = 'block';
+            } else {
+                backdropEl.style.display = 'none';
+            }
+
+            const headerEl = document.getElementById('main-site-header');
+            headerEl.style.zIndex = '220';
+            headerEl.style.position = 'fixed';
+            headerEl.style.filter = 'none';
+
+            const demoContainer = document.getElementById('tour-demo-container');
+            const demoContent = document.getElementById('tour-demo-content');
+            if (step.demo === "darklight-preview") {
+                demoContainer.classList.remove('hidden');
+                demoContent.innerHTML = "🌙 Preview: Dark Mode Active...<br><span class='text-[10px] text-pink-300 font-normal'>Switching back to Light Mode ☀️</span>";
+                document.documentElement.classList.add('dark');
+                setTimeout(() => {
+                    document.documentElement.classList.remove('dark');
+                }, 1400);
+            } else {
+                demoContainer.classList.add('hidden');
+            }
+
+            const prevBtn = document.getElementById('tour-prev-btn');
+            if (currentTourStep > 1) {
+                prevBtn.classList.remove('hidden');
+            } else {
+                prevBtn.classList.add('hidden');
+            }
+
+            const nextBtn = document.getElementById('tour-next-btn');
+            if (currentTourStep === tourSteps.length) {
+                nextBtn.textContent = 'Finish 🎉';
+            } else {
+                nextBtn.textContent = 'Next →';
+            }
+
+            const bubble = document.getElementById('tour-bubble-card');
+            bubble.classList.remove('hidden');
+
+            const chartsContainerEl = document.getElementById('cafe-sales-charts-container');
+            if (chartsContainerEl) chartsContainerEl.classList.remove('chart-spotlight-highlight');
+
+            if (!step.target || step.position === 'center') {
+                const heroEl = document.getElementById('hero');
+                if (heroEl) heroEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                bubble.style.position = 'fixed';
+                bubble.style.top = '50%';
+                bubble.style.left = '50%';
+                bubble.style.transform = 'translate(-50%, -50%)';
+                bubble.style.width = '350px';
+            } else {
+                bubble.style.transform = 'none';
+                const targetEl = document.getElementById(step.target) || document.querySelector('#' + step.target);
+                if (targetEl) {
+                    targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    setTimeout(() => {
+                        targetEl.classList.add('tour-spotlight-highlight');
+                        if (step.target === 'cafe-sales-charts-container') {
+                            chartsContainerEl.classList.add('chart-spotlight-highlight');
+                        }
+                        const rect = targetEl.getBoundingClientRect();
+                        const bubbleRect = bubble.getBoundingClientRect();
+                        
+                        let topPos;
+                        let leftPos = rect.left + (rect.width / 2) - (bubbleRect.width / 2);
+
+                        if (step.position === 'above') {
+                            topPos = rect.top - bubbleRect.height - 18;
+                        } else {
+                            topPos = rect.bottom + 18;
+                        }
+
+                        if (topPos < 16) topPos = rect.bottom + 18;
+                        if (topPos + bubbleRect.height > window.innerHeight - 16) {
+                            topPos = rect.top - bubbleRect.height - 18;
+                        }
+                        if (leftPos < 16) leftPos = 16;
+                        if (leftPos + bubbleRect.width > window.innerWidth - 16) {
+                            leftPos = window.innerWidth - bubbleRect.width - 16;
+                        }
+
+                        bubble.style.position = 'fixed';
+                        bubble.style.top = `${Math.max(16, topPos)}px`;
+                        bubble.style.left = `${Math.max(16, leftPos)}px`;
+                    }, 400);
+                }
+            }
+        }
+
+        function clearSpotlight() {
+            tourSteps.forEach(s => {
+                if (s.target) {
+                    const el = document.getElementById(s.target) || document.querySelector('#' + s.target);
+                    if (el) el.classList.remove('tour-spotlight-highlight');
+                }
+            });
+            const chartsContainerEl = document.getElementById('cafe-sales-charts-container');
+            if (chartsContainerEl) chartsContainerEl.classList.remove('chart-spotlight-highlight');
+            const headerEl = document.getElementById('main-site-header');
+            headerEl.style.zIndex = '220';
+        }
+
+        function closeTour() {
+            clearSpotlight();
+            document.body.classList.remove('tour-active');
+            document.body.classList.add('tour-completed');
+            document.getElementById('tour-spotlight-backdrop').style.display = 'none';
+            document.getElementById('tour-bubble-card').classList.add('hidden');
+            
+            const heroEl = document.getElementById('hero');
+            if (heroEl) {
+                heroEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            showToast('Enjoy exploring the portfolio! 💖');
+        }
+
+        const lightboxGalleryMap = {
+            'cafe': [
+                { url: 'https://i.postimg.cc/25tZpJpG/IMG-2491.jpg', caption: 'Phusit Cafe: Sales Growth Chart 1' },
+                { url: 'https://i.postimg.cc/jj17V9Vv/IMG-2493.jpg', caption: 'Phusit Cafe: Sales Growth Chart 2' },
+                { url: 'https://i.postimg.cc/HxhRDRqF/IMG-2671.jpg', caption: 'Phusit Nungchill Cafe: Verified Sales Growth Chart 3' },
+                { url: 'https://i.postimg.cc/CLqygn31/IMG-0443.jpg', caption: 'Cafe Asset New 01' },
+                { url: 'https://i.postimg.cc/QdG2xxD9/IMG-0492.jpg', caption: 'Cafe Asset New 02' },
+                { url: 'https://i.postimg.cc/Z5tGKKmJ/IMG-1857.jpg', caption: 'Cafe Asset New 03' },
+                { url: 'https://i.postimg.cc/VkQxLLwC/IMG-2973.png', caption: 'Cafe Asset New 04' },
+                { url: 'https://i.postimg.cc/JzVf4487/IMG-3115.jpg', caption: 'Cafe Asset New 05' },
+                { url: 'https://i.postimg.cc/XYSR77Wq/IMG-3123.jpg', caption: 'Cafe Asset New 06' },
+                { url: 'https://i.postimg.cc/kg30XXCn/IMG-3485.jpg', caption: 'Cafe Asset New 07' },
+                { url: 'https://i.postimg.cc/3x5sJJh8/IMG-3487.jpg', caption: 'Cafe Asset New 08' },
+                { url: 'https://i.postimg.cc/P5sgrrHP/IMG-5023.jpg', caption: 'Cafe Asset New 09' },
+                { url: 'https://i.postimg.cc/XYSR77Wr/IMG-5222.jpg', caption: 'Cafe Asset New 10' },
+                { url: 'https://i.postimg.cc/sgdkDDzG/IMG-7465.jpg', caption: 'Cafe Asset New 11' },
+                { url: 'https://i.postimg.cc/P5sgrrH8/men-xisr-m-7.png', caption: 'Cafe Asset New 12' },
+                { url: 'https://i.postimg.cc/zXrmqG87/IMG-2691.png', caption: 'Cafe Asset New 13' },
+                { url: 'https://i.postimg.cc/5NVcf2bs/IMG-2693.png', caption: 'Cafe Asset New 15' },
+                { url: 'https://i.postimg.cc/Qx3Ljdhg/IMG-2694.png', caption: 'Cafe Asset New 16' },
+                { url: 'https://i.postimg.cc/Y91qXyt1/IMG-2974.jpg', caption: 'Phusit Cafe Promo Asset 01' },
+                { url: 'https://i.postimg.cc/W3Mb9fs4/IMG-2988.png', caption: 'Phusit Cafe Promo Asset 02' },
+                { url: 'https://i.postimg.cc/FRjsPnh7/IMG-2994.png', caption: 'Phusit Cafe Promo Asset 03' },
+                { url: 'https://i.postimg.cc/d18tWSJh/IMG-3001.png', caption: 'Phusit Cafe Promo Asset 04' },
+                { url: 'https://i.postimg.cc/ZRrKfDJv/IMG-3002.jpg', caption: 'Phusit Cafe Promo Asset 05' },
+                { url: 'https://i.postimg.cc/sXpDn03x/IMG-3006.jpg', caption: 'Phusit Cafe Promo Asset 06' },
+                { url: 'https://i.postimg.cc/Qtpx6njV/IMG-3007.png', caption: 'Phusit Cafe Promo Asset 07' },
+                { url: 'https://i.postimg.cc/Y91qXytz/IMG-3011.jpg', caption: 'Phusit Cafe Promo Asset 08' },
+                { url: 'https://i.postimg.cc/gJvkMBGy/IMG-3014.jpg', caption: 'Phusit Cafe Promo Asset 09' },
+                { url: 'https://i.postimg.cc/LXz6y0mB/IMG-3015.jpg', caption: 'Phusit Cafe Promo Asset 10' },
+                { url: 'https://i.postimg.cc/HndWF4LQ/IMG-3023.jpg', caption: 'Phusit Cafe Promo Asset 11' },
+                { url: 'https://i.postimg.cc/vTb8CLmr/IMG-3024.jpg', caption: 'Phusit Cafe Promo Asset 12' },
+                { url: 'https://i.postimg.cc/vTb8CLm7/IMG-3028.jpg', caption: 'Phusit Cafe Promo Asset 13' },
+                { url: 'https://i.postimg.cc/7hwPjMLM/IMG-3041.jpg', caption: 'Phusit Cafe Promo Asset 14' },
+                { url: 'https://i.postimg.cc/HndWF4L9/IMG-3043.jpg', caption: 'Phusit Cafe Promo Asset 15' },
+                { url: 'https://i.postimg.cc/8cNkxBC4/IMG-3044.jpg', caption: 'Phusit Cafe Promo Asset 16' },
+                { url: 'https://i.postimg.cc/gjmc1q0K/IMG-3045.jpg', caption: 'Phusit Cafe Promo Asset 17' },
+                { url: 'https://i.postimg.cc/sxsfb92K/IMG-3057.jpg', caption: 'Phusit Cafe Promo Asset 18' },
+                { url: 'https://i.postimg.cc/sxsfb92T/IMG-3058.jpg', caption: 'Phusit Cafe Promo Asset 19' },
+                { url: 'https://i.postimg.cc/vTb8CLmq/IMG-3072.jpg', caption: 'Phusit Cafe Promo Asset 20' },
+                { url: 'https://i.postimg.cc/vTb8CLmP/IMG-3074.jpg', caption: 'Phusit Cafe Promo Asset 21' },
+                { url: 'https://i.postimg.cc/KjxcCrYp/IMG-3079.jpg', caption: 'Phusit Cafe Promo Asset 22' },
+                { url: 'https://i.postimg.cc/x8njBydZ/IMG-3081.png', caption: 'Phusit Cafe Promo Asset 23' },
+                { url: 'https://i.postimg.cc/kGqMLF5z/IMG-3082.png', caption: 'Phusit Cafe Promo Asset 24' },
+                { url: 'https://i.postimg.cc/2yrjgF6p/IMG-3097.png', caption: 'Phusit Cafe Promo Asset 25' },
+                { url: 'https://i.postimg.cc/2yrjgF6R/IMG-3098.png', caption: 'Phusit Cafe Promo Asset 26' },
+                { url: 'https://i.postimg.cc/8cNkxB5V/IMG-3100.png', caption: 'Phusit Cafe Promo Asset 27' }
+            ],
+            'realestate': [
+                { url: 'https://i.postimg.cc/854KN3q5/IMG-2674.png', caption: 'Real Estate Portfolio Administration Main Listing' },
+                { url: 'https://i.postimg.cc/P500Rgjn/IMG-2676.png', caption: 'Real Estate Review 01' },
+                { url: 'https://i.postimg.cc/nhNNPyt6/IMG-2677.png', caption: 'Real Estate Review 02' },
+                { url: 'https://i.postimg.cc/4xjjSDTj/IMG-2678.png', caption: 'Real Estate Review 03' },
+                { url: 'https://i.postimg.cc/nhX6TH6b/IMG-2679.png', caption: 'Real Estate Review 04' },
+                { url: 'https://i.postimg.cc/NjKWbgZR/IMG-2680.png', caption: 'Real Estate Review 05' },
+                { url: 'https://i.postimg.cc/wj1SF6nw/IMG-2681.png', caption: 'Real Estate Review 06' },
+                { url: 'https://i.postimg.cc/RZWjGM22/IMG-2683.png', caption: 'Real Estate Review 07' },
+                { url: 'https://i.postimg.cc/DwSt52RH/IMG-2684.png', caption: 'Real Estate Review 08' }
+            ],
+            'insurance': [
+                { url: 'https://i.postimg.cc/zvnzL1ZQ/IMG-3198.jpg', caption: 'Phusit Insurance: Official Brand Emblem' }
+            ],
+            'leadership': [
+                { url: 'https://i.postimg.cc/yYH2RDqw/IMG-2685.jpg', caption: 'CU Student Club: Project Lead & Treasurer' },
+                { url: 'https://i.postimg.cc/VL82tJQc/IMG-2697.jpg', caption: 'RYLA Leadership: Club Representative Certificate' },
+                { url: 'https://i.postimg.cc/65XFZ8Jx/IMG-2698.jpg', caption: 'Rotary Exchange: Advisor & PR Strategy' },
+                { url: 'https://i.postimg.cc/NGzPJGP2/IMG-3101.jpg', caption: 'Leadership Asset 01' },
+                { url: 'https://i.postimg.cc/HWhPZWPc/IMG-3102.jpg', caption: 'Leadership Asset 02' },
+                { url: 'https://i.postimg.cc/PfRF3fFP/IMG-3104.jpg', caption: 'Leadership Asset 03' },
+                { url: 'https://i.postimg.cc/sDGHtFt5/IMG-3105.jpg', caption: 'Leadership Asset 04' },
+                { url: 'https://i.postimg.cc/WpHfWpfg/IMG-3110.jpg', caption: 'Leadership Asset 05' },
+                { url: 'https://i.postimg.cc/ryPYnyYf/IMG-3112.jpg', caption: 'Leadership Asset 06' },
+                { url: 'https://i.postimg.cc/ZYMD7YD6/IMG-3113.jpg', caption: 'Leadership Asset 07' },
+                { url: 'https://i.postimg.cc/zDcPtDPn/IMG-3114.jpg', caption: 'Leadership Asset 08' },
+                { url: 'https://i.postimg.cc/FFBnWFnx/IMG-3115.jpg', caption: 'Leadership Asset 09' },
+                { url: 'https://i.postimg.cc/G35S73SQ/IMG-3116.jpg', caption: 'Leadership Asset 10' },
+                { url: 'https://i.postimg.cc/66m1j61c/IMG-3117.jpg', caption: 'Leadership Asset 11' },
+                { url: 'https://i.postimg.cc/8k0nKkny/IMG-3118.png', caption: 'Leadership Asset 12' },
+                { url: 'https://i.postimg.cc/Nf2CWhW1/IMG-5835.jpg', caption: 'Leadership Asset 13' },
+                { url: 'https://i.postimg.cc/8k0nKkn6/IMG-5840.jpg', caption: 'Leadership Asset 14' },
+                { url: 'https://i.postimg.cc/4NH2rCrQ/IMG-5841.jpg', caption: 'Leadership Asset 15' },
+                { url: 'https://i.postimg.cc/Hs8vfGfB/IMG-5855.png', caption: 'Leadership Asset 16' },
+                { url: 'https://i.postimg.cc/7PWQsPQC/IMG-5885.png', caption: 'Leadership Asset 17' },
+                { url: 'https://i.postimg.cc/BZVwYZw1/IMG-6103.jpg', caption: 'Leadership Asset 18' },
+                { url: 'https://i.postimg.cc/MKf3hkhY/IMG-8674.jpg', caption: 'Leadership Asset 19' },
+                { url: 'https://i.postimg.cc/Bb5W9dzN/cache-Messagep39464.jpg', caption: 'Leadership Asset 20' },
+                { url: 'https://i.postimg.cc/yxCqGVLz/IMG-2116.jpg', caption: 'Leadership Asset 21' },
+                { url: 'https://i.postimg.cc/gjb97Ygb/IMG-3109.jpg', caption: 'Leadership Asset 22' },
+                { url: 'https://i.postimg.cc/sxCFLVwN/IMG-3111.jpg', caption: 'Leadership Asset 23' },
+                { url: 'https://i.postimg.cc/0j1g48Vx/IMG-8675.jpg', caption: 'Leadership Asset 24' }
+            ],
+            'hero': [
+                { url: 'https://i.postimg.cc/x1b5kWVH/9ADF1D9D-4668-47A2-98ED-9CBF78B35501.jpg', caption: 'Chatchana Phoplap (Nepjune): Marketing & Growth Strategist' }
+            ]
+        };
+
+        let currentLightboxGallery = 'cafe';
+        let currentLightboxIndex = 0;
+
+        const multinationalInsurers = [
+            { name: "Chubb Insurance", sub: "GLOBAL PARTNER • VERIFIED", url: "https://i.postimg.cc/qvPqmQJL/IMG-3149.png", desc: "Multinational property and casualty insurance partner audited under Phusit Insurance Brokerage." },
+            { name: "MSIG Insurance", sub: "GLOBAL PARTNER • VERIFIED", url: "https://i.postimg.cc/g2Xrq1WQ/IMG-3150.png", desc: "Global general insurance provider reconciled for corporate policy portfolios." },
+            { name: "Allianz Insurance", sub: "GLOBAL PARTNER • VERIFIED", url: "https://i.postimg.cc/FHMzPGrM/IMG-3151.png", desc: "Multinational financial services and insurance partner managed for premium settlements." },
+            { name: "American International Group (AIG)", sub: "GLOBAL PARTNER • VERIFIED", url: "https://i.postimg.cc/3xsNL98t/IMG-3152.webp", desc: "Leading global insurance organization reconciled under corporate brokerage records." },
+            { name: "AXA Insurance", sub: "GLOBAL PARTNER • VERIFIED", url: "https://i.postimg.cc/0yTjtZkW/IMG-3153.webp", desc: "Multinational insurance firm verified for commercial risk underwriting and claims." },
+            { name: "ERGO Insurance", sub: "GLOBAL PARTNER • VERIFIED", url: "https://i.postimg.cc/Qd2C6S8Y/IMG-3154.png", desc: "European primary insurance group reconciled for international policyholders." },
+            { name: "LMG Insurance", sub: "GLOBAL PARTNER • VERIFIED", url: "https://i.postimg.cc/YC50X8rV/IMG-3155.webp", desc: "Multinational motor and property insurer audited for seamless monthly settlements." },
+            { name: "Tokio Marine Insurance", sub: "GLOBAL PARTNER • VERIFIED", url: "https://i.postimg.cc/wjCMWFxB/IMG-3156.png", desc: "Global marine and non-life insurance partner reconciled under statutory accounts." },
+            { name: "Sompo Insurance", sub: "GLOBAL PARTNER • VERIFIED", url: "https://i.postimg.cc/0yTjtZ5q/IMG-3158.png", desc: "Multinational property and casualty partner verified for corporate accounts." },
+            { name: "AIA", sub: "GLOBAL PARTNER • VERIFIED", url: "https://i.postimg.cc/N0RMZTLQ/IMG-3159.png", desc: "Pan-Asian life insurance and financial services partner reconciled for client portfolios." },
+            { name: "Prudential Life Assurance", sub: "GLOBAL PARTNER • VERIFIED", url: "https://i.postimg.cc/mr7DKMh4/IMG-3160.png", desc: "Multinational life assurance provider audited for premium reconciliation and tax filing." }
+        ];
+
+        const nationalInsurers = [
+            { name: "The Viriyah Insurance", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/Sx2j7HhH/IMG-3148.png", desc: "Top national non-life insurer reconciled for high-volume motor and property policies." },
+            { name: "Bangkok Insurance (BKI)", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/1zDtb649/IMG-3163.png", desc: "Leading Thai non-life insurance partner audited for corporate risk portfolios." },
+            { name: "Bangkok Life Assurance", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/mr7DKMhL/IMG-3164.png", desc: "National life insurance provider reconciled under statutory brokerage accounts." },
+            { name: "Muang Thai Insurance", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/s25XbS12/IMG-3165.png", desc: "Prominent Thai insurance partner verified for comprehensive policy reconciliation." },
+            { name: "Tokio Safety / Safety Insurance", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/jjy5BNCn/IMG-3166.webp", desc: "National safety and casualty insurer reconciled for commercial claims." },
+            { name: "Navakij Insurance", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/6QC3FRT2/IMG-3169.png", desc: "Established Thai non-life insurance company audited for financial compliance." },
+            { name: "Thanachart Insurance", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/R0wF2fqH/IMG-3170.jpg", desc: "National insurance provider reconciled for vehicle and accident protection portfolios." },
+            { name: "Dhiphaya Insurance", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/3w2RzpWG/IMG-3172.png", desc: "Leading national P&C insurer audited for government and corporate policies." },
+            { name: "Deves Insurance", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/9fyMsTzG/IMG-3174.png", desc: "Established Thai insurance partner reconciled for general and property underwriting." },
+            { name: "Indara Insurance", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/5t80Dvjv/IMG-3176.png", desc: "National insurance provider audited for accurate monthly premium settlements." },
+            { name: "Krungthai Panich Insurance (KPI)", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/wBDvnJ3X/IMG-3177.webp", desc: "Bank-affiliated national non-life insurer reconciled under corporate accounts." },
+            { name: "Mittare Insurance", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/5t80Dvj5/IMG-3179.png", desc: "National motor and fire insurance partner verified for statutory compliance." },
+            { name: "Thaisri Insurance", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/VNX62M5F/IMG-3181.png", desc: "Established domestic insurer reconciled for accident and property portfolios." },
+            { name: "Namsin Insurance", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/JhjnSJtq/IMG-3182.webp", desc: "National non-life insurance provider audited for seamless ledger matching." },
+            { name: "Ngern Tid Lor", sub: "FINANCIAL BROKER • VERIFIED", url: "https://i.postimg.cc/ZRZRmRyd/IMG-3183.jpg", desc: "Major financial and loan insurance broker partner reconciled for vehicle title loans." },
+            { name: "Allianz Ayudhya Insurance", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/3R7RhRDG/IMG-3185.png", desc: "Joint-venture national insurer verified for health and life policy settlements." },
+            { name: "Sri Ayudhya General Insurance", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/RF9FmFnf/IMG-3186.jpg", desc: "Established national general insurer reconciled under brokerage accounts." },
+            { name: "Siam Commercial Life Assurance", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/76D646T0/IMG-3187.jpg", desc: "Major banking-group life assurance partner audited for corporate filings." },
+            { name: "Southeast Insurance", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/3RqLf7Fy/IMG-3239.jpg", desc: "National insurance provider reconciled for retail and commercial policies." },
+            { name: "TSI", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/SsPZ1qf2/IMG-3240.png", desc: "Thai Safety Insurance partner audited for accident and property claims." },
+            { name: "Syn Mun Kong Insurance (SMK)", sub: "NATIONAL PROVIDER • VERIFIED", url: "https://i.postimg.cc/NM8nMZ6Z/IMG-3241.png", desc: "National non-life insurance partner reconciled under historical premium ledgers." }
+        ];
+
+        function renderPreviewGrids() {
+            const rowMultinationalEl = document.getElementById('insurance-marquee-multinational');
+            const rowNationalEl = document.getElementById('insurance-marquee-national');
+            if (rowMultinationalEl && rowNationalEl) {
+                const buildBadgeHtml = (list) => {
+                    const doubled = [...list, ...list];
+                    return doubled.map((partner, idx) => `
+                        <div onclick="inspectInsurancePartner('${partner.name.replace(/'/g, "\\'")}', '${partner.sub}', '${partner.url}', '${partner.desc.replace(/'/g, "\\'")}')" style="background: #fff; border: 1.5px solid #f5d0fe; border-radius: 12px; padding: 6px 10px; width: 260px;" class="shadow-sticker flex items-center gap-2.5 cursor-pointer hover:scale-105 transition-transform shrink-0">
+                            <div class="w-10 h-10 rounded-lg bg-white border border-stone-200 flex items-center justify-center p-1 overflow-hidden shrink-0 shadow-sm">
+                                <img src="${partner.url}" alt="${partner.name}" class="w-full h-full object-contain" />
+                            </div>
+                            <div class="text-left pr-1 min-w-0 flex-1">
+                                <span class="font-display font-bold text-xs text-ink dark:text-white block leading-tight truncate">${partner.name}</span>
+                                <span class="font-mono text-[9px] text-pink-600 font-bold uppercase block tracking-wider mt-0.5">${partner.sub}</span>
+                            </div>
+                        </div>
+                    `).join('');
+                };
+
+                rowMultinationalEl.innerHTML = buildBadgeHtml(multinationalInsurers);
+                rowNationalEl.innerHTML = buildBadgeHtml(nationalInsurers);
+            }
+
+            const cafeGrid = document.getElementById('cafe-preview-grid');
+            if (cafeGrid) {
+                const cafePhotos = lightboxGalleryMap['cafe'].slice(3);
+                cafeGrid.innerHTML = cafePhotos.map((item, idx) => `
+                    <div onclick="openLightbox(${idx + 3}, 'cafe')" class="aspect-square rounded-xl overflow-hidden border-2 border-stone-300 dark:border-slate-700 bg-white cursor-pointer group hover:scale-105 transition-transform shadow-sm">
+                        <img src="${item.url}" alt="Cafe Photo ${idx}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                    </div>
+                `).join('');
+            }
+
+            const reGrid = document.getElementById('realestate-preview-grid');
+            if (reGrid) {
+                reGrid.innerHTML = lightboxGalleryMap['realestate'].map((item, idx) => `
+                    <div onclick="openLightbox(${idx}, 'realestate')" class="aspect-square rounded-xl overflow-hidden border-2 border-stone-300 dark:border-slate-700 bg-white cursor-pointer group hover:scale-105 transition-transform shadow-sm">
+                        <img src="${item.url}" alt="Real Estate Photo ${idx}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                    </div>
+                `).join('');
+            }
+
+            const leadGrid = document.getElementById('leadership-preview-grid');
+            if (leadGrid) {
+                leadGrid.innerHTML = lightboxGalleryMap['leadership'].map((item, idx) => `
+                    <div onclick="openLightbox(${idx}, 'leadership')" class="aspect-square rounded-xl overflow-hidden border border-stone-300 dark:border-slate-600 bg-white dark:bg-slate-800 cursor-pointer shadow-sm relative group hover:scale-105 transition-transform">
+                        <img src="${item.url}" alt="Leadership Photo ${idx}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                    </div>
+                `).join('');
+            }
+        }
+
+        function inspectInsurancePartner(name, sub, logoUrl, desc) {
+            const modal = document.getElementById('modal-backdrop');
+            const content = document.getElementById('modal-content');
+            content.innerHTML = `
+                <div class="space-y-5">
+                    <div class="flex items-center gap-4 pb-4 border-b border-stone-200 dark:border-slate-700">
+                        <div class="w-16 h-16 rounded-xl bg-white border-2 border-ink flex items-center justify-center p-2 shadow-sm shrink-0">
+                            <img src="${logoUrl}" alt="${name}" class="w-full h-full object-contain" />
+                        </div>
+                        <div>
+                            <span class="px-2.5 py-0.5 rounded bg-pink-100 text-pink-700 font-mono text-[10px] font-bold uppercase">${sub}</span>
+                            <h3 class="font-display font-extrabold text-xl text-ink dark:text-white mt-1">${name}</h3>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-stone-50 dark:bg-slate-800 border border-stone-200 dark:border-slate-700 space-y-2">
+                        <span class="font-mono text-xs font-bold text-pink-600 dark:text-pink-400 uppercase">Audit &amp; Reconciliation Profile:</span>
+                        <p class="text-xs sm:text-sm text-stone-700 dark:text-stone-300 leading-relaxed">${desc}</p>
+                        <p class="text-xs text-stone-500 font-mono pt-1">Managed under Phusit Insurance Broker Co., Ltd. ledger reconciliation and corporate tax compliance records (2021–2024).</p>
+                    </div>
+                    <div class="flex justify-end pt-2">
+                        <button onclick="closeModal()" class="btn-cream-sticker px-5 py-2 rounded-full text-xs font-display font-bold">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function inspectCafeTool(toolName, toolDesc, logoUrl) {
+            const modal = document.getElementById('modal-backdrop');
+            const content = document.getElementById('modal-content');
+            content.innerHTML = `
+                <div class="space-y-5">
+                    <div class="flex items-center gap-4 pb-4 border-b border-stone-200 dark:border-slate-700">
+                        <div class="w-16 h-16 rounded-xl bg-white border-2 border-ink flex items-center justify-center p-2 shadow-sm shrink-0">
+                            <img src="${logoUrl}" alt="${toolName}" class="w-full h-full object-contain" />
+                        </div>
+                        <div>
+                            <span class="px-2.5 py-0.5 rounded bg-pink-100 text-pink-700 font-mono text-[10px] font-bold uppercase">CAFE MARKETING &amp; OPERATIONS TOOL</span>
+                            <h3 class="font-display font-extrabold text-xl text-ink dark:text-white mt-1">${toolName}</h3>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-stone-50 dark:bg-slate-800 border border-stone-200 dark:border-slate-700 space-y-2">
+                        <span class="font-mono text-xs font-bold text-pink-600 dark:text-pink-400 uppercase">Execution &amp; Workflow Overview:</span>
+                        <p class="text-xs sm:text-sm text-stone-700 dark:text-stone-300 leading-relaxed">${toolDesc}</p>
+                        <p class="text-xs text-stone-500 font-mono pt-1">Deployed hands-on at Phusit Nungchill Cafe to streamline orders, boost retention, and track sales performance.</p>
+                    </div>
+                    <div class="flex justify-end pt-2">
+                        <button onclick="closeModal()" class="btn-cream-sticker px-5 py-2 rounded-full text-xs font-display font-bold">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function inspectRealEstateTool(toolName, toolDesc, logoUrl) {
+            const modal = document.getElementById('modal-backdrop');
+            const content = document.getElementById('modal-content');
+            content.innerHTML = `
+                <div class="space-y-5">
+                    <div class="flex items-center gap-4 pb-4 border-b border-stone-200 dark:border-slate-700">
+                        <div class="w-16 h-16 rounded-xl bg-white border-2 border-ink flex items-center justify-center p-2 shadow-sm shrink-0">
+                            <img src="${logoUrl}" alt="${toolName}" class="w-full h-full object-contain" />
+                        </div>
+                        <div>
+                            <span class="px-2.5 py-0.5 rounded bg-butter text-ink font-mono text-[10px] font-bold uppercase">REAL ESTATE &amp; PROPERTY PLATFORM</span>
+                            <h3 class="font-display font-extrabold text-xl text-ink dark:text-white mt-1">${toolName}</h3>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-stone-50 dark:bg-slate-800 border border-stone-200 dark:border-slate-700 space-y-2">
+                        <span class="font-mono text-xs font-bold text-pink-600 dark:text-pink-400 uppercase">Execution &amp; Workflow Overview:</span>
+                        <p class="text-xs sm:text-sm text-stone-700 dark:text-stone-300 leading-relaxed">${toolDesc}</p>
+                        <p class="text-xs text-stone-500 font-mono pt-1">Managed under Real Estate by PP Group portfolio operations to drive occupancy and rental yield.</p>
+                    </div>
+                    <div class="flex justify-end pt-2">
+                        <button onclick="closeModal()" class="btn-cream-sticker px-5 py-2 rounded-full text-xs font-display font-bold">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function openGalleryModal(category) {
+            currentLightboxGallery = category;
+            const modal = document.getElementById('gallery-modal-backdrop');
+            const titleEl = document.getElementById('gallery-modal-title');
+            const gridEl = document.getElementById('gallery-modal-grid');
+
+            const titles = {
+                'cafe': 'Phusit Nungchill Cafe Gallery (45 Assets)',
+                'realestate': 'Real Estate Portfolio Gallery (9 Assets)',
+                'leadership': 'Leadership & Event Gallery (27 Assets)'
+            };
+            titleEl.textContent = titles[category] || 'Full Gallery';
+
+            const list = lightboxGalleryMap[category] || [];
+            gridEl.innerHTML = list.map((item, idx) => `
+                <div onclick="closeGalleryModal(); openLightbox(${idx}, '${category}');" class="aspect-square rounded-xl overflow-hidden border-2 border-stone-300 dark:border-slate-700 bg-white cursor-pointer group hover:scale-105 transition-transform shadow-sm">
+                    <img src="${item.url}" alt="Gallery item" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                </div>
+            `).join('');
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeGalleryModal() {
+            const modal = document.getElementById('gallery-modal-backdrop');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function openLightbox(index, category = 'cafe') {
+            currentLightboxGallery = category;
+            currentLightboxIndex = index;
+            renderLightboxItem();
+
+            const lightbox = document.getElementById('lightbox-backdrop');
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    lightbox.classList.add('lightbox-open');
+                });
+            });
+        }
+
+        function renderLightboxItem() {
+            const list = lightboxGalleryMap[currentLightboxGallery];
+            if (!list || list.length === 0) return;
+            const item = list[currentLightboxIndex];
+
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+            const counter = document.getElementById('lightbox-counter');
+
+            img.src = item.url;
+            cap.textContent = item.caption;
+            counter.textContent = `${currentLightboxIndex + 1} / ${list.length}`;
+        }
+
+        function navigateLightbox(direction) {
+            const list = lightboxGalleryMap[currentLightboxGallery];
+            if (!list || list.length === 0) return;
+            currentLightboxIndex = (currentLightboxIndex + direction + list.length) % list.length;
+            renderLightboxItem();
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox-backdrop');
+            lightbox.classList.remove('lightbox-open');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+                document.getElementById('lightbox-img').src = '';
+            }, 180);
+        }
+
+        const skillData = {
+            campaign: {
+                title: "Full-Funnel Campaign Architecture & Paid Acquisition",
+                level: "OMNI-CHANNEL GROWTH",
+                width: "96%",
+                desc: "Designing high-conversion promotional campaigns that balance customer acquisition cost (CAC) with basket-size growth by combining targeted social ads, local SEO, and customer referral programs."
+            },
+            research: {
+                title: "Consumer Intelligence, Product Ideation & Asset Feasibility",
+                level: "CONSUMER INSIGHTS & FEASIBILITY",
+                width: "95%",
+                desc: "Turning real-time buyer feedback and local market trends into profitable product launches and practical real estate feasibility assessments, evaluating renovation ROI, buyer profiles, and long-term returns."
+            },
+            pricing: {
+                title: "Full-Cycle Bookkeeping, Corporate Tax & Yield Management",
+                level: "FINANCIAL RIGOR & COMPLIANCE",
+                width: "98%",
+                desc: "Combining hands-on corporate accounting (50+ CIT/VAT tax filings and B2B reconciliation across 33 insurance partners) with unit-cost pricing, charm pricing, and seasonal yield management."
+            },
+            outreach: {
+                title: "Automated CRM Retention & Cross-Cultural Mediation",
+                level: "CRM & STAKEHOLDER RELATIONS",
+                width: "94%",
+                desc: "Building proactive digital CRM journeys (automated messaging, loyalty programs, and community management) alongside bilingual communication and international stakeholder relations across the UK, Singapore, and Thailand."
+            },
+            tools: {
+                title: "Financial Accounting, CRM Systems & Analytics Stack",
+                level: "1ST CLASS HONOURS (UK)",
+                width: "96%",
+                desc: "Strong proficiency in Microsoft Excel (full-cycle bookkeeping, tax schedules, ROI tracking), Thai Revenue Department tax filings (CIT/VAT), LINE Official Account CRM, Meta Ads Manager, Google Business Profile SEO, and bilingual English and Thai communication."
+            }
+        };
+
+        function selectSkill(key) {
+            const item = skillData[key];
+            if (!item) return;
+
+            document.getElementById('skill-title').textContent = item.title;
+            document.getElementById('skill-level').textContent = item.level;
+            document.getElementById('skill-desc').textContent = item.desc;
+            document.getElementById('skill-bar').style.width = item.width;
+
+            document.querySelectorAll('.skill-pill').forEach(btn => {
+                btn.className = "skill-pill px-4 py-2.5 rounded-xl font-display font-bold text-xs sm:text-sm flex items-center gap-2 bg-white dark:bg-slate-800 text-ink dark:text-white border-2 border-ink dark:border-slate-600 hover:bg-butter transition-all hover:scale-105";
+            });
+            const activeBtn = document.getElementById('pill-' + key);
+            if (activeBtn) {
+                activeBtn.className = "skill-pill px-4 py-2.5 rounded-xl font-display font-bold text-xs sm:text-sm flex items-center gap-2 bg-pink-500 text-white border-2 border-ink dark:border-pink-400 shadow-sticker transition-all hover:scale-105";
+            }
+        }
+
+        const projectDetails = {
+            cafe: {
+                badge: "Phusit Nungchill Cafe • Aug 2024 – Dec 2024",
+                title: "Full-Funnel Menu R&D, Proactive LINE CRM & Cost-Backed Pricing Strategy",
+                brandLogo: "https://i.postimg.cc/13DtgwSY/IMG-3212.jpg",
+                toolsLabel: "PLATFORMS & MARKETING TOOLS EXECUTED:",
+                toolsLogos: [
+                    "https://i.postimg.cc/g27DJ9zm/IMG-3192.png",
+                    "https://i.postimg.cc/K8WNzXGz/IMG-3193.png",
+                    "https://i.postimg.cc/9QkpM3mf/IMG-3194.jpg",
+                    "https://i.postimg.cc/W4J7q9zN/IMG-3195.jpg",
+                    "https://i.postimg.cc/Dzbc4C0c/IMG-3199.png",
+                    "https://i.postimg.cc/SKzGYZRY/IMG-3200.jpg",
+                    "https://i.postimg.cc/W3NjppMZ/IMG-3219.jpg",
+                    "https://i.postimg.cc/gkqLcsLg/IMG-3235.webp",
+                    "https://i.postimg.cc/FsgkFpkC/IMG-3236.png"
+                ],
+                summary: "Managed commercial marketing, daily backend cost tracking, and multi-channel customer engagement (LINE OA, Facebook, and Google Business Profile), turning customer feedback and cost data into 4 months of steady revenue growth.",
+                bullets: [
+                    "<strong>Consumer Feedback &amp; Menu R&amp;D:</strong> Gathered direct customer feedback and Facebook inbox insights to create high-margin bestsellers (Signature Oregano Pies &amp; Cakes), calorie-calculated healthy options, and seasonal menus (Christmas, Halloween, Valentine’s, and Mother’s Day), along with in-house food photography and menu design.",
+                    "<strong>Backend Cost Analysis &amp; Charm Pricing:</strong> Handled daily bookkeeping and unit-cost calculations to create profitable promotions, using \".9\" charm pricing, cross-selling bundles (Pie/Cake + Drink sets), and volume deals (1-get-1, 2-get-1, 3-get-1 free, 3-for-90 THB, and a \"Check-in &amp; Review for Free Pie\" campaign).",
+                    "<strong>Proactive LINE OA CRM &amp; Page Admin:</strong> Set up the cafe’s LINE Official Account from scratch with custom Rich Menus, automated greeting messages, loyalty stamp cards, and promotional broadcasts. Also managed the Facebook Page, ran targeted ads, and updated the Google Business Profile (4.9-star rating with 3,057+ views).",
+                    "<strong>Sustained Multi-Month Commercial Growth:</strong><ul class='pl-5 mt-1.5 space-y-1 list-[circle]'><li><strong>Aug 2024:</strong> Weekly net sales grew +28.62% (THB 13,765), raising average ticket size to THB 88.81 (+18.67%) across 155 receipts (+8.39%).</li><li><strong>Sep to Oct 2024:</strong> Net sales jumped +86.38% (THB 15,639), with order volume increasing +86.21% (216 receipts).</li><li><strong>Nov 2024:</strong> Maintained strong results with +33.13% net sales growth (THB 11,401), +17.09% order volume (137 receipts), and +13.69% average ticket size (THB 83.22).</li></ul>"
+                ]
+            },
+            realestate: {
+                badge: "Real Estate by PP Group • Dec 2024 – Apr 2025",
+                title: "Real Estate by PP Group: Airbnb Superhost, Dynamic Pricing & Asset Marketing",
+                toolsLabel: "PROPERTY LISTING & AD PLATFORMS USED:",
+                toolsLogos: [
+                    "https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg",
+                    "https://i.postimg.cc/sg3QMNkh/IMG-3202.png",
+                    "https://i.postimg.cc/Dzbc4C0c/IMG-3199.png",
+                    "https://i.postimg.cc/BnJLjVrH/IMG-3204.jpg",
+                    "https://i.postimg.cc/SKzGYZRY/IMG-3200.jpg",
+                    "https://i.postimg.cc/RZv6WDkt/IMG-3206.png"
+                ],
+                summary: "Managed property marketing, on-site property assessments, and Airbnb and social media listings across a 10-property residential and commercial portfolio.",
+                bullets: [
+                    "<strong>On-Site Asset Inspection &amp; Feasibility Strategy:</strong> Inspected condos in person to check property condition and renovation costs, deciding whether each unit was best suited for renovation, short-term or long-term rental, or direct sale based on target buyer and tenant profiles.",
+                    "<strong>Airbnb Superhost &amp; Seasonal Dynamic Pricing:</strong> Handled daily Airbnb hosting operations, earning Superhost status, steady year-round occupancy, and a 4.8 to 5.0 star guest rating by adjusting rates for high and low tourism seasons and local holidays.",
+                    "<strong>Targeted Paid Ads &amp; Location-Driven Copywriting:</strong> Created promotional graphics and ran Facebook Ads, Marketplace listings, and DDproperty posts for both sales and rentals, writing clear copy that highlighted prime Pattaya locations (beach access, nearby malls, Bali Hai Pier views, and easy transport)."
+                ]
+            },
+            insurance: {
+                badge: "Phusit Insurance • Tax & Accounting Associate",
+                title: "Full-Cycle Bookkeeping, Corporate Tax Compliance & B2B Partner Reconciliation",
+                brandLogo: "https://i.postimg.cc/zvnzL1ZQ/IMG-3198.jpg",
+                summary: "Handled full-cycle accounting, corporate tax filings, and B2B billing reconciliation across 33 multinational and domestic insurance companies.",
+                bullets: [
+                    "<strong>B2B Premium Reconciliation (33 Insurance Partners):</strong> Managed full-cycle bookkeeping and reconciled premium accounts across global insurers (Chubb, Allianz, AIG, AXA, ERGO, LMG, Tokio Marine) and major national providers (Viriyah, Bangkok Insurance, Muang Thai, Thanachart, Deves, Navakij, Indara, KPI, Mittare, Thaisri, TSI, and Ngern Tid Lor), maintaining 100% billing accuracy.",
+                    "<strong>Statutory Tax Compliance (50+ Corporate Filings):</strong> Prepared, reviewed, and submitted 50+ corporate tax returns and schedules, including Corporate Income Tax (CIT) and Value Added Tax (VAT), in full compliance with Thai Revenue Department rules.",
+                    "<strong>Corporate Registration &amp; Partner Administration:</strong> Coordinated vehicle registration and annual tax renewal documents directly with corporate clients and insurance partners to ensure accurate and timely submissions.",
+                    "<strong>Commercial Foundation for Marketing &amp; Strategy:</strong> Applied practical accounting and cost-tracking skills to build realistic pricing, margin calculations, and ROI forecasts in retail and real estate projects."
+                ]
+            },
+            events: {
+                badge: "UK Student Union & Rotary International • 2017 – 2026",
+                title: "Student Union (UK) & Rotary Youth Exchange (RYE / RYLA)",
+                orgLogos: [
+                    "https://i.postimg.cc/NF4hqGvp/IMG-3209.png",
+                    "https://i.postimg.cc/KjNXSchV/IMG-3210.png",
+                    "https://i.postimg.cc/T198M2vF/IMG-3211.png"
+                ],
+                summary: "Experience leading university student events and club budgets in the UK while supporting cross-cultural coordination and student relations for Rotary International in Thailand.",
+                bullets: [
+                    "<strong>CU Student Union (Project Lead &amp; Treasurer):</strong> Managed event planning, campus promotions, and club budgets for cultural and social events, working closely with student committee members.",
+                    "<strong>Cultural Integration &amp; Activity Design (Rotary RYE):</strong> Organized welcome events and group activities for 8 international exchange students, including cultural dinners, local trips, and casual meetups to help them settle in comfortably.",
+                    "<strong>Bilingual Communication &amp; Host Family Support:</strong> Acted as a bilingual point of contact between exchange students and local host families, helping resolve everyday misunderstandings clearly and supporting the Rotary Club President with student communications."
+                ]
+            }
+        };
+
+        function inspectProject(key) {
+            const p = projectDetails[key];
+            if (!p) return;
+            const modal = document.getElementById('modal-backdrop');
+            const content = document.getElementById('modal-content');
+
+            const brandAvatarHtml = p.brandLogo ? `
+                <div class="brand-logo-showcase shrink-0">
+                    <img src="${p.brandLogo}" alt="Brand Logo" class="w-24 h-24 sm:w-28 sm:h-28 object-contain rounded-xl" />
+                </div>
+            ` : '';
+
+            const orgLogosHtml = p.orgLogos ? `
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    ${p.orgLogos.map(url => `
+                        <span class="p-4 rounded-3xl bg-white dark:bg-slate-800 border-2 border-ink shadow-sm flex items-center justify-center">
+                            <img src="${url}" alt="Org Logo" style="height: 64px; width: auto; object-contain;" />
+                        </span>
+                    `).join('')}
+                </div>
+            ` : '';
+
+            const toolsStripHtml = p.toolsLogos ? `
+                <div class="p-4 rounded-2xl bg-blush/60 dark:bg-slate-800 border border-pink-200 dark:border-slate-700 flex flex-wrap items-center gap-3">
+                    <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-pink-600 dark:text-pink-400 mr-1 w-full">${p.toolsLabel}</span>
+                    ${p.toolsLogos.map(url => `
+                        <span class="tool-badge-pill">
+                            <img src="${url}" alt="Tool" style="height: 28px; width: auto; object-contain;" />
+                        </span>
+                    `).join('')}
+                </div>
+            ` : '';
+
+            content.innerHTML = `
+                <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-pink-100 dark:bg-pink-950 text-pink-700 dark:text-pink-300 border border-pink-300 dark:border-pink-800">${p.badge}</span>
+                ${orgLogosHtml}
+                <div class="flex items-center gap-3.5 mt-2">
+                    ${brandAvatarHtml}
+                    <h3 class="font-display font-extrabold text-2xl text-ink dark:text-white">${p.title}</h3>
+                </div>
+                <p class="text-stone-600 dark:text-stone-300 text-sm leading-relaxed">${p.summary}</p>
+                ${toolsStripHtml}
+                <div class="p-4 rounded-2xl bg-blush dark:bg-slate-800 border-2 border-pink-200 dark:border-slate-700 space-y-2">
+                    <p class="text-xs font-mono font-bold text-pink-600 dark:text-pink-400 uppercase">Key Marketing &amp; Commercial Impact:</p>
+                    <ul class="text-xs sm:text-sm text-stone-700 dark:text-stone-300 space-y-2 list-disc list-inside leading-relaxed">
+                        ${p.bullets.map(b => `<li>${b}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="flex justify-end pt-2">
+                    <button onclick="closeModal()" class="btn-cream-sticker px-5 py-2 rounded-full text-xs font-display font-bold">
+                        Close
+                    </button>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function openCVModal() {
+            const modal = document.getElementById('modal-backdrop');
+            const content = document.getElementById('modal-content');
+            content.innerHTML = `
+                <div class="space-y-6">
+                    <div class="border-b border-stone-200 dark:border-slate-700 pb-4 flex flex-wrap items-center justify-between gap-2 pr-10">
+                        <div>
+                            <span class="text-xs font-mono font-bold text-pink-600 dark:text-pink-400 uppercase">FULL CURRICULUM VITAE // MARKETING, BRAND STRATEGY &amp; COMMERCIAL ANALYTICS</span>
+                            <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-ink dark:text-white">CHATCHANA PHOPLAP (NEPJUNE)</h3>
+                            <p class="text-xs text-stone-500 font-mono mt-1">📱 +65 9241 7112 • 📧 chatchanaphoplap@gmail.com • 🌐 English (Fluent) / Thai (Native)</p>
+                        </div>
+                        <button onclick="window.print()" class="btn-pink-glossy px-4 py-2 rounded-full text-xs font-display font-bold flex items-center gap-1.5">
+                            <span>🖨️ Print / Save PDF</span>
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 text-xs">
+                        <div class="lg:col-span-5 space-y-4">
+                            <div class="p-4 rounded-2xl bg-blush/70 dark:bg-slate-800 border border-pink-200 dark:border-slate-700 space-y-3">
+                                <h4 class="font-display font-extrabold text-base text-ink dark:text-white border-b border-pink-200 dark:border-slate-700 pb-2">🎓 Academic Background (UK)</h4>
+                                <div class="space-y-1">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-mono text-[10px] font-bold text-stone-500">Dec 2024 – Jul 2026</span>
+                                        <span class="px-2 py-0.5 rounded-full bg-pink-500 text-white font-mono text-[9px] font-bold">First-Class Honours ★</span>
+                                    </div>
+                                    <p class="font-display font-bold text-sm text-ink dark:text-white">COVENTRY UNIVERSITY – United Kingdom</p>
+                                    <p class="font-semibold text-stone-700 dark:text-stone-300">Bachelor of Science with Honours in Accounting and Finance</p>
+                                    <p class="text-stone-500">Strong foundation in commercial analytics, pricing strategy, consumer markets, and corporate performance evaluation.</p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-stone-50 dark:bg-slate-800 border border-stone-200 dark:border-slate-700 space-y-3">
+                                <h4 class="font-display font-extrabold text-base text-ink dark:text-white border-b border-stone-200 dark:border-slate-700 pb-2">🌍 Public Outreach, Events &amp; Leadership</h4>
+                                <div class="space-y-2.5">
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <p class="font-bold text-ink dark:text-white">Friends of Autism Charitable Trust – SG</p>
+                                            <span class="font-mono text-[10px] font-bold text-pink-600 dark:text-pink-400">Jul – Aug 2026</span>
+                                        </div>
+                                        <p class="text-stone-700 dark:text-stone-300 font-medium">Community Outreach &amp; Advocacy Project Volunteer</p>
+                                        <p class="text-stone-500 leading-relaxed">Represented the foundation in public engagement campaigns to drive community awareness for Autism Spectrum Disorder (ASD), strengthening cross-cultural public communication.</p>
+                                    </div>
+                                    <div class="pt-2 border-t border-stone-200 dark:border-slate-700">
+                                        <div class="flex items-center justify-between">
+                                            <p class="font-bold text-ink dark:text-white">Student Union – UK (Thai Student)</p>
+                                            <span class="font-mono text-[10px] font-bold text-pink-600 dark:text-pink-400">Aug 2025 – Jun 2026</span>
+                                        </div>
+                                        <p class="text-stone-700 dark:text-stone-300 font-medium">Project Lead (Aug–Dec 2025) &amp; Treasurer (Jan–Jun 2026)</p>
+                                        <p class="text-stone-500 leading-relaxed">Partnered with cross-functional teams to plan, promote, and execute student events, managing team communication, event funding allocation, and strict operational deadlines.</p>
+                                    </div>
+                                    <div class="pt-2 border-t border-stone-200 dark:border-slate-700">
+                                        <div class="flex items-center justify-between">
+                                            <p class="font-bold text-ink dark:text-white">Rotary International (Kantharalak Chapter)</p>
+                                            <span class="font-mono text-[10px] font-bold text-pink-600 dark:text-pink-400">Aug 2018 – Aug 2019</span>
+                                        </div>
+                                        <p class="text-stone-700 dark:text-stone-300 font-medium">Rotary Youth Exchange Advisor &amp; Assistant</p>
+                                        <p class="text-stone-500 leading-relaxed">Advised the Club President on communication strategies to streamline international student onboarding and managed stakeholder relationships across diverse cultural backgrounds for 8 international placements.</p>
+                                    </div>
+                                    <div class="pt-2 border-t border-stone-200 dark:border-slate-700">
+                                        <div class="flex items-center justify-between">
+                                            <p class="font-bold text-ink dark:text-white">Rotary Youth Leadership Awards (RYLA)</p>
+                                            <span class="font-mono text-[10px] font-bold text-pink-600 dark:text-pink-400">Oct 2017</span>
+                                        </div>
+                                        <p class="text-stone-700 dark:text-stone-300 font-medium">RYLA Delegate (Club Representative)</p>
+                                        <p class="text-stone-500 leading-relaxed">Selected by the executive board to facilitate cross-cultural collaboration among Thai and international workshop participants under tight project deadlines.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-7 space-y-4">
+                            <div class="p-4 rounded-2xl bg-stone-50 dark:bg-slate-800 border border-stone-200 dark:border-slate-700 space-y-3">
+                                <div class="flex items-center justify-between border-b border-stone-200 dark:border-slate-700 pb-2">
+                                    <h4 class="font-display font-extrabold text-base text-ink dark:text-white">💼 Professional Experience</h4>
+                                    <span class="font-mono text-[10px] text-stone-400">2021 – 2025</span>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-stone-200 dark:border-slate-700 space-y-1.5">
+                                    <div class="flex flex-wrap items-center justify-between gap-1">
+                                        <p class="font-display font-bold text-sm text-ink dark:text-white">REAL ESTATE BY PP GROUP – Thailand</p>
+                                        <span class="px-2 py-0.5 rounded-full bg-pink-100 dark:bg-pink-950 text-pink-700 dark:text-pink-300 font-mono text-[10px] font-semibold">Dec 2024 – Apr 2025</span>
+                                    </div>
+                                    <p class="text-[11px] font-bold text-pink-600 dark:text-pink-400 uppercase">Real Estate Portfolio Administrator (Promotions &amp; Commercial Strategy)</p>
+                                    <ul class="text-stone-600 dark:text-stone-300 space-y-1 list-disc list-inside leading-relaxed">
+                                        <li>Managed a <strong>10-property real estate portfolio</strong>, directing <strong>promotional campaigns</strong>, tenant relations, and property positioning to drive occupancy and retention.</li>
+                                        <li>Conducted market and operational cost analysis to formulate competitive <strong>pricing strategies</strong>, optimizing promotional budgets and reconciling monthly cash flows to maximize ROI.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-stone-200 dark:border-slate-700 space-y-1.5">
+                                    <div class="flex flex-wrap items-center justify-between gap-1">
+                                        <p class="font-display font-bold text-sm text-ink dark:text-white">PHUSIT NUNGCHILL CAFE – Thailand</p>
+                                        <span class="px-2 py-0.5 rounded-full bg-pink-100 dark:bg-pink-950 text-pink-700 dark:text-pink-300 font-mono text-[10px] font-semibold">Aug 2024 – Dec 2024</span>
+                                    </div>
+                                    <p class="text-[11px] font-bold text-pink-600 dark:text-pink-400 uppercase">Operations Manager (Product R&amp;D, Menu Marketing &amp; Sales Growth)</p>
+                                    <ul class="text-stone-600 dark:text-stone-300 space-y-1 list-disc list-inside leading-relaxed">
+                                        <li>Analyzed monthly sales trends and consumer purchasing behavior to formulate targeted <strong>pricing and promotional strategies</strong>, <strong class="text-pink-600 dark:text-pink-400">increasing weekly net sales by 28.6%</strong> in August 2024.</li>
+                                        <li>Spearheaded new beverage and dessert product development and updated menu offerings through <strong>continuous market research (R&amp;D)</strong> to capture evolving customer tastes.</li>
+                                        <li>Improved <strong>average ticket size to THB 88.81 (+18.7%)</strong> through strategic menu upselling while processing <strong>155 transactions (+8.4%)</strong> and directing front-of-house customer experience.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-stone-200 dark:border-slate-700 space-y-1.5">
+                                    <div class="flex flex-wrap items-center justify-between gap-1">
+                                        <p class="font-display font-bold text-sm text-ink dark:text-white">PHUSIT INSURANCE BROKER CO., LTD – Thailand</p>
+                                        <span class="px-2 py-0.5 rounded-full bg-pink-100 dark:bg-pink-950 text-pink-700 dark:text-pink-300 font-mono text-[10px] font-semibold">Aug 2021 – Aug 2024</span>
+                                    </div>
+                                    <p class="text-[11px] font-bold text-stone-500 uppercase">Account Assistant &amp; Corporate Representative</p>
+                                    <ul class="text-stone-600 dark:text-stone-300 space-y-1 list-disc list-inside leading-relaxed">
+                                        <li>Selected as the <strong>Corporate Delegate for two consecutive years (2023–2024)</strong> at national statutory workshops, demonstrating strong professional representation and client-facing reliability.</li>
+                                        <li>Prepared and reviewed <strong>50+ corporate accounts and compliance filings</strong> with 100% accuracy, managing client registration services and end-to-end documentation.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-blush dark:bg-slate-800 border border-pink-200 dark:border-slate-700 flex flex-wrap items-center justify-between gap-3">
+                                <div>
+                                    <span class="font-mono font-bold text-pink-600 dark:text-pink-400 uppercase block">Software, Certifications &amp; Languages</span>
+                                    <span class="text-stone-700 dark:text-stone-300">Microsoft Office Suite (Proficient in Excel, Word, PowerPoint) • Sage 50 • Financial Accounting Foundations (LinkedIn Learning, Aug 2026)</span>
+                                </div>
+                                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-900 border border-ink dark:border-slate-600 font-mono font-bold text-ink dark:text-white">
+                                    English (Fluent) • Thai (Native)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap justify-end gap-3 pt-2 border-t border-stone-200 dark:border-slate-700">
+                        <button onclick="window.print()" class="btn-pink-glossy px-5 py-2 rounded-full text-xs font-display font-bold">
+                            Print / Save as PDF
+                        </button>
+                        <button onclick="closeModal()" class="btn-cream-sticker px-5 py-2 rounded-full text-xs font-display font-bold">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal-backdrop');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').textContent = msg;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 2800);
+        }
+
+        document.getElementById('modal-backdrop').addEventListener('click', (e) => {
+            if (e.target.id === 'modal-backdrop') closeModal();
+        });
+        document.getElementById('lightbox-backdrop').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox-backdrop') closeLightbox();
+        });
+        document.getElementById('gallery-modal-backdrop').addEventListener('click', (e) => {
+            if (e.target.id === 'gallery-modal-backdrop') closeGalleryModal();
+        });
+    </script>
+</body>
+</html>
